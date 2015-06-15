@@ -1,6 +1,0 @@
-framework module Box {
-  umbrella header "Pods-loyalty-demo-Box-umbrella.h"
-
-  export *
-  module * { export * }
-}

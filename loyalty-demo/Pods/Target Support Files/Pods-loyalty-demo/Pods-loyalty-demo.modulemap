@@ -1,6 +1,0 @@
-framework module Pods_loyalty_demo {
-  umbrella header "Pods-loyalty-demo-umbrella.h"
-
-  export *
-  module * { export * }
-}

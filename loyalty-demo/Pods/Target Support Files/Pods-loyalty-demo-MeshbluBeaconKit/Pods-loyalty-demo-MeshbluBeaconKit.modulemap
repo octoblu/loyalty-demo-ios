@@ -1,6 +1,0 @@
-framework module MeshbluBeaconKit {
-  umbrella header "Pods-loyalty-demo-MeshbluBeaconKit-umbrella.h"
-
-  export *
-  module * { export * }
-}

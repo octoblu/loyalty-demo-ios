@@ -1,6 +1,0 @@
-framework module MeshbluKit {
-  umbrella header "Pods-loyalty-demo-MeshbluKit-umbrella.h"
-
-  export *
-  module * { export * }
-}
