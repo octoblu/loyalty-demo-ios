@@ -13,6 +13,7 @@
 		06A85DE41B2F4497002637F2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06A85DE31B2F4497002637F2 /* Images.xcassets */; };
 		06A85DE71B2F4497002637F2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06A85DE51B2F4497002637F2 /* LaunchScreen.xib */; };
 		06A85DF31B2F4497002637F2 /* loyalty_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A85DF21B2F4497002637F2 /* loyalty_demoTests.swift */; };
+		06DBDD2E1B2F598600238F67 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DBDD2D1B2F598600238F67 /* CoreLocation.framework */; };
 		52611638AFC7AC66BA7EDEDC /* Pods_loyalty_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0521CD9A4DEBC53DC4F8B600 /* Pods_loyalty_demo.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		06A85DEC1B2F4497002637F2 /* loyalty-demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "loyalty-demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06A85DF11B2F4497002637F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06A85DF21B2F4497002637F2 /* loyalty_demoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loyalty_demoTests.swift; sourceTree = "<group>"; };
+		06DBDD2D1B2F598600238F67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1E8470A16FC4296880F38E36 /* Pods-loyalty-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loyalty-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-loyalty-demo/Pods-loyalty-demo.release.xcconfig"; sourceTree = "<group>"; };
 		343469B7D2B7616CF871CFC0 /* Pods-loyalty-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loyalty-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-loyalty-demo/Pods-loyalty-demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06DBDD2E1B2F598600238F67 /* CoreLocation.framework in Frameworks */,
 				52611638AFC7AC66BA7EDEDC /* Pods_loyalty_demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,6 +134,7 @@
 		9AA3D70BB46C0373FC765DF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				06DBDD2D1B2F598600238F67 /* CoreLocation.framework */,
 				0521CD9A4DEBC53DC4F8B600 /* Pods_loyalty_demo.framework */,
 			);
 			name = Frameworks;

@@ -2,7 +2,7 @@ PODS:
   - Alamofire (1.2.3)
   - Box (1.2.2)
   - Dollar (3.0.2)
-  - MeshbluBeaconKit (1.0.0):
+  - MeshbluBeaconKit (1.1.0):
     - Dollar (~> 3.0.1)
     - MeshbluKit
   - MeshbluKit (0.3.3):
@@ -21,7 +21,7 @@ SPEC CHECKSUMS:
   Alamofire: 5550bf0b575ed1a4bf9be572f9463e1015cc169e
   Box: a92e8aa4c099e6bc0733829665caf9e668ef53b8
   Dollar: fa1c277042a5e8208f2276abba056f27a812fcfe
-  MeshbluBeaconKit: e57e8cff53d9ea7e4c45c92adf67b32cb3fc8193
+  MeshbluBeaconKit: 7fa418ba39bca84ba97862d8ed8ab906c0cce3d3
   MeshbluKit: ea0b0155b56fc6b46554613b41cc2937439c7cb1
   Result: b44f6bc8762bbffaf2c5df58f2c7d12c3496ced8
   SwiftyJSON: 0b3e6c07af17ff745e77e8e9984097b55c956e5c

@@ -7,15 +7,27 @@
 //
 
 import UIKit
+import CoreLocation
+import MeshbluBeaconKit
+import SwiftyJSON
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, MeshbluBeaconKitDelegate {
 
   var window: UIWindow?
+  var meshbluBeaconKit : MeshbluBeaconKit!
 
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    // Override point for customization after application launch.
+    println("Starting up Loyalty app")
+    var meshbluConfig = Dictionary<String, AnyObject>()
+    let settings = NSUserDefaults.standardUserDefaults()
+    
+    meshbluConfig["uuid"] = settings.stringForKey("uuid")
+    meshbluConfig["token"] = settings.stringForKey("token")
+    
+    self.meshbluBeaconKit = MeshbluBeaconKit(meshbluConfig: meshbluConfig)
+    meshbluBeaconKit.start("B9407F30-F5F8-466E-AFF9-25556B57FE6D", beaconIdentifier: "Estimote Region", delegate: self)
     return true
   }
 
@@ -42,5 +54,66 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
 
+}
+
+extension AppDelegate: MeshbluBeaconKitDelegate {
+  
+  func getMainControler() -> ViewController {
+    let viewController:ViewController = window!.rootViewController as! ViewController
+    return viewController
+  }
+  
+  func updateMainViewWithMessage(message: String){
+    let viewController = getMainControler()
+    println("Message is \(message)")
+  }
+  
+  func proximityChanged(response: [String: AnyObject]) {
+    println("Proximity Changed")
+    var message = ""
+    let proximity = response["proximity"] as! [String: AnyObject]
+    switch(proximity["code"] as! Int) {
+    case 3:
+      message = "Far away from beacon"
+    case 2:
+      message = "You are near the beacon"
+    case 1:
+      message = "Immediate proximity to beacon"
+    case 0:
+      message = "No beacons are nearby"
+    default:
+      message = "No beacons are nearby"
+    }
+    
+    let viewController = getMainControler()
+    self.updateMainViewWithMessage(message)
+    self.meshbluBeaconKit.sendLocationUpdate(response) {
+      (result) -> () in
+    }
+  }
+  
+  func meshbluBeaconIsUnregistered() {
+    println("Meshblu Beacon Unregistered")
+    self.meshbluBeaconKit.register()
+  }
+  
+  func meshbluBeaconRegistrationSuccess(device: [String: AnyObject]) {
+    println("Meshblu Registration Success \(device)")
+    let settings = NSUserDefaults.standardUserDefaults()
+    let uuid = device["uuid"] as! String
+    let token = device["token"] as! String
+    
+    settings.setObject(uuid, forKey: "uuid")
+    settings.setObject(token, forKey: "token")
+  }
+  
+  func beaconEnteredRegion() {
+    self.updateMainViewWithMessage("Beacon Entered Region")
+  }
+  
+  func beaconExitedRegion() {
+    self.updateMainViewWithMessage("Beacon Exitied Region")
+  }
+  
 }
 

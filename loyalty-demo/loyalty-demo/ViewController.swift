@@ -12,8 +12,8 @@ class ViewController: UIViewController, UIWebViewDelegate {
 
   @IBOutlet var kioskWebView: UIWebView!
   
-  let uuid = "297a484a-ba82-48a0-b303-5d288f25530d"
-  let token = "b7627358dfc0c8cbcdfa2699bdb28032104d03a0"
+  let uuid = "c3f31834-8e12-46d2-b159-62cbea2d3f18"
+  let token = "962f54fe236271a01f50a82b5e389bdde652e441"
   
   override func viewDidLoad() {
     super.viewDidLoad()
