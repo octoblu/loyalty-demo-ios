@@ -1,0 +1,1826 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0295DCA01790439332A36E71 /* Pods-loyalty-demo-Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE77D27F29C7A2F85D7271C /* Pods-loyalty-demo-Alamofire-dummy.m */; };
+		0A17A3EDD46260A99A4E70F0 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0E19643EE4A12690C50C35 /* Dollar.framework */; };
+		0BE9204B228313A3FEE05710 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 867BE1F0A1CDECB54CFBE63A /* Box.framework */; };
+		0C5BE513ACFC84285A5710A6 /* Pods-loyalty-demo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BF566582DBE83CE2DE9C976 /* Pods-loyalty-demo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0CFD3F433CBBCD0238154F8C /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC3454E5EEB3401D35AFEF /* ResponseSerialization.swift */; };
+		138EA7BFC6AF78DF87EA38AE /* Pods-loyalty-demo-MeshbluKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD9577D06D996920DDD2746 /* Pods-loyalty-demo-MeshbluKit-dummy.m */; };
+		182865AB86CCF0EAC6CE6708 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA5CC8A6F9FEE36BD6DD66E /* CoreLocation.framework */; };
+		19DF2D9EE4CC69B7CD617222 /* Pods-loyalty-demo-Dollar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FD682ACBD93F22D4A092B902 /* Pods-loyalty-demo-Dollar-dummy.m */; };
+		1AB32E2310E6A6C3894A5FE9 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702326C5C81B92177A30A29A /* Manager.swift */; };
+		1F7547D1324D32A967A8F015 /* MeshbluKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2B491CCA43155EEB9B241260 /* MeshbluKit.bundle */; };
+		29AF4E5266223E281C2347FD /* Dollar.h in Headers */ = {isa = PBXBuildFile; fileRef = F5E9DB603860D8793BE2EB07 /* Dollar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CF6345E85868C5737031243 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A9470FED6F718FF588E5DD /* Foundation.framework */; };
+		2D9961992641ECE7EC47FB6E /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABAFDA05367A0ADF115A893 /* Result.framework */; };
+		36E3E0ADB8612F0331F2061C /* Pods-loyalty-demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBBE7AD771C5B8866F77BB9 /* Pods-loyalty-demo-dummy.m */; };
+		4A0EE2AE2DF81F15ABA81A55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A9470FED6F718FF588E5DD /* Foundation.framework */; };
+		4B8F9EE0827EF8CDBFF37402 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A9470FED6F718FF588E5DD /* Foundation.framework */; };
+		54E661836C274C5218AEA4B3 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00490B629BAEFAA58021A6E0 /* Download.swift */; };
+		601556DAA113EC5CEF78B958 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A9470FED6F718FF588E5DD /* Foundation.framework */; };
+		6553A7F790A3F6AA68C6B132 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF52639294323DB2E88E72 /* Upload.swift */; };
+		6920BCD9CED63ACD21F2AA06 /* MutableBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B196303BD2BF18113B3F288F /* MutableBox.swift */; };
+		6D60A85349F4EEA04701A3F8 /* Pods-loyalty-demo-Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 517069F1A94665DC8CD772D3 /* Pods-loyalty-demo-Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7FE89F9893287C85BCEB5AC5 /* Pods-loyalty-demo-Box-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 987D7B5B376723C085DF4038 /* Pods-loyalty-demo-Box-dummy.m */; };
+		827DD0B0F5A3536E63EBAAC8 /* Pods-loyalty-demo-Dollar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E125D48FD5FEEFBE5C976E9A /* Pods-loyalty-demo-Dollar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		862C0CA41EF5225DD40B919E /* AutoCurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739EB13441841A2CBA339083 /* AutoCurry.swift */; };
+		8675C0D3FA04A9D7DFF4CCFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A9470FED6F718FF588E5DD /* Foundation.framework */; };
+		8976AA26D339B286BA8C1CAA /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494CC650C78EBA28B2804A36 /* SwiftyJSON.swift */; };
+		8A25753D73413DAC7857EA1A /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD68950E8891AF94D085BFCF /* Alamofire.swift */; };
+		8AE60D48D9251488B440CDD7 /* Pods-loyalty-demo-SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B067744AF50D4F436DE858 /* Pods-loyalty-demo-SwiftyJSON-dummy.m */; };
+		8CB3C871A12C0042FF53A3AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A9470FED6F718FF588E5DD /* Foundation.framework */; };
+		8E2D22A70B42CA7F4CC87498 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A4D68B29444F3809686FF /* Validation.swift */; };
+		8EAFF0D444C5E8B37AB1368D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D486CFE0FFA3AA55176D745 /* Result.swift */; };
+		8F7FBB329BECAC1578EB34A2 /* Dollar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A687E30A277A61EF151724DD /* Dollar.swift */; };
+		9062B44509FDDEFA5440C606 /* BoxType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2652BD33A6AFF05C778028 /* BoxType.swift */; };
+		91798898017070F0822EE2A0 /* Pods-loyalty-demo-SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 68D0DE8948B303E369F6DF67 /* Pods-loyalty-demo-SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		920992C887D6D6EB1AC17459 /* Pods-loyalty-demo-MeshbluKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BB70C096E61DE0F688A149AA /* Pods-loyalty-demo-MeshbluKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93FA788666097F444652C7A1 /* MeshbluBeaconKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C3E0DC1CE003195336D1BB /* MeshbluBeaconKit.swift */; };
+		987D39E8297299CCB1FA9DD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A9470FED6F718FF588E5DD /* Foundation.framework */; };
+		98E6F88CF80D7E3AD4EAF635 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44662449340939DCE09A7021 /* Box.swift */; };
+		9915C36E0E224FE4104B23B2 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F3C57318912A1F921D72A5 /* SwiftyJSON.framework */; };
+		A29D7168CEB3940E99E826EE /* Pods-loyalty-demo-Result-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C038E34BA32FDC0A7CEB33 /* Pods-loyalty-demo-Result-dummy.m */; };
+		A2C786BAC0CEA6998876D3B2 /* Pods-loyalty-demo-MeshbluBeaconKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C194EB2B4491B0EA77AD89A5 /* Pods-loyalty-demo-MeshbluBeaconKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B94D95667FB951360DE13B98 /* Pods-loyalty-demo-MeshbluBeaconKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F0A83B518AEBC9C5ACD4A2 /* Pods-loyalty-demo-MeshbluBeaconKit-dummy.m */; };
+		BA0949F523DA867F5EEB5AE6 /* Pods-loyalty-demo-Result-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 358A9A10331DB95D4E1A595E /* Pods-loyalty-demo-Result-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBDB31A6574B8C88C373E626 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B713F719F02DF7705B7F2BB8 /* Request.swift */; };
+		C71341807E90CC4B147B2351 /* MeshbluKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7520F46423AA6DE9C8C32D2 /* MeshbluKit.framework */; };
+		D2FCBFCD478C307A36BFFA93 /* Box.h in Headers */ = {isa = PBXBuildFile; fileRef = EB6CADBAA91439950AC7DF46 /* Box.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCDC488C711AA2DA39323749 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A9470FED6F718FF588E5DD /* Foundation.framework */; };
+		DF3A76F8B46F6AA5979428E6 /* Pods-loyalty-demo-Box-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EB61710510F0138E6B25CC01 /* Pods-loyalty-demo-Box-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8FF4D3D7CFD909E1D3F4BC2 /* MeshbluBeaconKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BEF3B15632D4B5EDEDF00596 /* MeshbluBeaconKit.bundle */; };
+		F57268B63F36195F8A1C32E4 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFE6D14BA0F1F9746BE3DA6 /* ParameterEncoding.swift */; };
+		F82A8B7A848309A2F75606CC /* MeshbluHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D493678C542696567AC962C9 /* MeshbluHttp.swift */; };
+		FE28857AC623DAF17D685E74 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538251C1C005D18775654368 /* Alamofire.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0641DC0F473172A0786018AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 957CE0CADC9BF5BA17CD955F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 653B44703974CBAB926CCEAB;
+			remoteInfo = "Pods-loyalty-demo-MeshbluKit-MeshbluKit";
+		};
+		139846FE36B9D6226EF64697 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 957CE0CADC9BF5BA17CD955F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 066E286429C3508B39985413;
+			remoteInfo = "Pods-loyalty-demo-SwiftyJSON";
+		};
+		2754801C447426CD68B66977 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 957CE0CADC9BF5BA17CD955F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F654333D7B90C6F07879ADA;
+			remoteInfo = "Pods-loyalty-demo-Dollar";
+		};
+		35391BA06BA07306EDBA2588 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 957CE0CADC9BF5BA17CD955F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B99F6FC33B89F503DF75E3A5;
+			remoteInfo = "Pods-loyalty-demo-MeshbluKit";
+		};
+		589CB1F5103E4947F34B3E16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 957CE0CADC9BF5BA17CD955F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 066E286429C3508B39985413;
+			remoteInfo = "Pods-loyalty-demo-SwiftyJSON";
+		};
+		61A31F642F54E2F594E24A69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 957CE0CADC9BF5BA17CD955F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D94BCF8B27831741ADF0789B;
+			remoteInfo = "Pods-loyalty-demo-Result";
+		};
+		827A6A4DFF873C83B6EDD63C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 957CE0CADC9BF5BA17CD955F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C75AAFE3721E89EC28D42179;
+			remoteInfo = "Pods-loyalty-demo-MeshbluBeaconKit-MeshbluBeaconKit";
+		};
+		8E17183FE8A5EC67713D7D33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 957CE0CADC9BF5BA17CD955F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B99F6FC33B89F503DF75E3A5;
+			remoteInfo = "Pods-loyalty-demo-MeshbluKit";
+		};
+		B3036BB15B493A95615FAAFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 957CE0CADC9BF5BA17CD955F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B3EF9906A8850EEED50719E;
+			remoteInfo = "Pods-loyalty-demo-Alamofire";
+		};
+		BCF4B982A32E28C488E97BC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 957CE0CADC9BF5BA17CD955F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F654333D7B90C6F07879ADA;
+			remoteInfo = "Pods-loyalty-demo-Dollar";
+		};
+		BD48589CBA9C6D35720107E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 957CE0CADC9BF5BA17CD955F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F5BFF28F3C522C241EE4A4F;
+			remoteInfo = "Pods-loyalty-demo-Box";
+		};
+		CCE381138A2756F7FF01D142 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 957CE0CADC9BF5BA17CD955F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF2251CD67D976FACD1E50BD;
+			remoteInfo = "Pods-loyalty-demo-MeshbluBeaconKit";
+		};
+		DD72EFC5BCC857A37B08CBEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 957CE0CADC9BF5BA17CD955F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D94BCF8B27831741ADF0789B;
+			remoteInfo = "Pods-loyalty-demo-Result";
+		};
+		E481AC9662CAF868AF8B7B3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 957CE0CADC9BF5BA17CD955F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B3EF9906A8850EEED50719E;
+			remoteInfo = "Pods-loyalty-demo-Alamofire";
+		};
+		FE9BA7DC7CAD8B2396FBCDA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 957CE0CADC9BF5BA17CD955F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F5BFF28F3C522C241EE4A4F;
+			remoteInfo = "Pods-loyalty-demo-Box";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00490B629BAEFAA58021A6E0 /* Download.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Download.swift; path = Source/Download.swift; sourceTree = "<group>"; };
+		02A9470FED6F718FF588E5DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		0381C35EE6BA03A723FDA242 /* Pods-loyalty-demo-SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-loyalty-demo-SwiftyJSON.xcconfig"; sourceTree = "<group>"; };
+		03AD86A71E280986DF800BF0 /* Pods_loyalty_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_loyalty_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07D86797CA0647900A1D3A1C /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		09F98184935A5F8DE1D2E3BA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A4D7EF5A94196F82DC5C2A6 /* Pods-loyalty-demo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-loyalty-demo-frameworks.sh"; sourceTree = "<group>"; };
+		0D1D29B84F60D9A6983FA17E /* Pods-loyalty-demo-Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-loyalty-demo-Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		0D486CFE0FFA3AA55176D745 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Result/Result.swift; sourceTree = "<group>"; };
+		143179061A09D56BE175BECB /* Pods-loyalty-demo-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-loyalty-demo-environment.h"; sourceTree = "<group>"; };
+		1645DA7E4D3B5FA6EC04FBDB /* MeshbluBeaconKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MeshbluBeaconKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ABAFDA05367A0ADF115A893 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C1D04163B621088AD82902D /* Pods-loyalty-demo-Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-loyalty-demo-Alamofire.modulemap"; sourceTree = "<group>"; };
+		269AB189BE8FA42889953204 /* Pods-loyalty-demo-Dollar-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-loyalty-demo-Dollar-Private.xcconfig"; sourceTree = "<group>"; };
+		28CB6ED76EADBE82F4C5F5E7 /* Pods-loyalty-demo-MeshbluBeaconKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-loyalty-demo-MeshbluBeaconKit.modulemap"; sourceTree = "<group>"; };
+		28D7DBDE01C9848DB019FB1A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29B9C47E4371D734AA471001 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A57D47054E2F3EA1B3C2185 /* Box.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Box.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B491CCA43155EEB9B241260 /* MeshbluKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeshbluKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C60FA3B13EFB3FDEFB3AD49 /* Pods-loyalty-demo-Alamofire-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-loyalty-demo-Alamofire-Private.xcconfig"; sourceTree = "<group>"; };
+		30F0A83B518AEBC9C5ACD4A2 /* Pods-loyalty-demo-MeshbluBeaconKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-loyalty-demo-MeshbluBeaconKit-dummy.m"; sourceTree = "<group>"; };
+		358A9A10331DB95D4E1A595E /* Pods-loyalty-demo-Result-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-loyalty-demo-Result-umbrella.h"; sourceTree = "<group>"; };
+		3660AF998F51C2375C720F47 /* Pods-loyalty-demo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-loyalty-demo-acknowledgements.plist"; sourceTree = "<group>"; };
+		394A833010CB865934D71367 /* Pods-loyalty-demo-MeshbluBeaconKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-loyalty-demo-MeshbluBeaconKit.xcconfig"; sourceTree = "<group>"; };
+		3D9A579661D877BC39763F47 /* Pods-loyalty-demo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-loyalty-demo.modulemap"; sourceTree = "<group>"; };
+		3E2652BD33A6AFF05C778028 /* BoxType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BoxType.swift; path = Box/BoxType.swift; sourceTree = "<group>"; };
+		42B067744AF50D4F436DE858 /* Pods-loyalty-demo-SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-loyalty-demo-SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		44662449340939DCE09A7021 /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Box/Box.swift; sourceTree = "<group>"; };
+		494CC650C78EBA28B2804A36 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		49C038E34BA32FDC0A7CEB33 /* Pods-loyalty-demo-Result-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-loyalty-demo-Result-dummy.m"; sourceTree = "<group>"; };
+		4CE0395B80BDB9EB85E285E1 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FF02C16EE51F6D66E5EE177 /* Pods-loyalty-demo-Box.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-loyalty-demo-Box.xcconfig"; sourceTree = "<group>"; };
+		517069F1A94665DC8CD772D3 /* Pods-loyalty-demo-Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-loyalty-demo-Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		538251C1C005D18775654368 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5930CDA3910D1B344175B249 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59CC2DF9D14D346CE249B0A9 /* MeshbluKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MeshbluKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F5F5C36723A45B306336899 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61A07DF769DE0E30283AFD21 /* Pods-loyalty-demo-MeshbluBeaconKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-loyalty-demo-MeshbluBeaconKit-Private.xcconfig"; sourceTree = "<group>"; };
+		6436C3B464F1D652FFC42C52 /* Pods-loyalty-demo-MeshbluBeaconKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-loyalty-demo-MeshbluBeaconKit-prefix.pch"; sourceTree = "<group>"; };
+		68D0DE8948B303E369F6DF67 /* Pods-loyalty-demo-SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-loyalty-demo-SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		6DD9577D06D996920DDD2746 /* Pods-loyalty-demo-MeshbluKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-loyalty-demo-MeshbluKit-dummy.m"; sourceTree = "<group>"; };
+		702326C5C81B92177A30A29A /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Manager.swift; sourceTree = "<group>"; };
+		71822296D728709009F0E8F5 /* Pods-loyalty-demo-SwiftyJSON-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-loyalty-demo-SwiftyJSON-Private.xcconfig"; sourceTree = "<group>"; };
+		739EB13441841A2CBA339083 /* AutoCurry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoCurry.swift; path = Dollar/Dollar/AutoCurry.swift; sourceTree = "<group>"; };
+		77F2D2770F1D4C1B4BA7889A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79F3C57318912A1F921D72A5 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B0E19643EE4A12690C50C35 /* Dollar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dollar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BF566582DBE83CE2DE9C976 /* Pods-loyalty-demo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-loyalty-demo-umbrella.h"; sourceTree = "<group>"; };
+		7C365379BD7C0763642DB995 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CEF52639294323DB2E88E72 /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
+		7DAFAA17D3425B09CFD9C142 /* Pods-loyalty-demo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-loyalty-demo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7FBBE7AD771C5B8866F77BB9 /* Pods-loyalty-demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-loyalty-demo-dummy.m"; sourceTree = "<group>"; };
+		8229C2CAD6DDE5116DB99085 /* Pods-loyalty-demo-Box-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-loyalty-demo-Box-prefix.pch"; sourceTree = "<group>"; };
+		867BE1F0A1CDECB54CFBE63A /* Box.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Box.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8893A230D262BBACA0DA0F7B /* Pods-loyalty-demo-Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-loyalty-demo-Alamofire.xcconfig"; sourceTree = "<group>"; };
+		8C9A4D68B29444F3809686FF /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		940FB0C9B5266A8ED60D5E3D /* Pods-loyalty-demo-Result-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-loyalty-demo-Result-prefix.pch"; sourceTree = "<group>"; };
+		95720DE63F0BD9F53DF917DF /* Pods-loyalty-demo-MeshbluKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-loyalty-demo-MeshbluKit-prefix.pch"; sourceTree = "<group>"; };
+		987D7B5B376723C085DF4038 /* Pods-loyalty-demo-Box-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-loyalty-demo-Box-dummy.m"; sourceTree = "<group>"; };
+		9BE8E92E4875C2C4843D329E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D4CE1CBFD1F9D21A879F0F8 /* Pods-loyalty-demo-SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-loyalty-demo-SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		9E769035169E4B34372DC0C3 /* Pods-loyalty-demo-MeshbluKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-loyalty-demo-MeshbluKit-Private.xcconfig"; sourceTree = "<group>"; };
+		A020F935C367EA31F4BE8E8A /* Pods-loyalty-demo-Dollar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-loyalty-demo-Dollar-prefix.pch"; sourceTree = "<group>"; };
+		A397DE19E5930A5A5F7BF9D1 /* Pods-loyalty-demo-MeshbluKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-loyalty-demo-MeshbluKit.modulemap"; sourceTree = "<group>"; };
+		A3EE0CF6A5F456FCCA1D694D /* Pods-loyalty-demo-Box-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-loyalty-demo-Box-Private.xcconfig"; sourceTree = "<group>"; };
+		A687E30A277A61EF151724DD /* Dollar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dollar.swift; path = Dollar/Dollar/Dollar.swift; sourceTree = "<group>"; };
+		A7520F46423AA6DE9C8C32D2 /* MeshbluKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MeshbluKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB3E4A2240CB8B41C3C1AD38 /* Pods-loyalty-demo-Result.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-loyalty-demo-Result.modulemap"; sourceTree = "<group>"; };
+		B067C26F0605EB2766BF6910 /* Pods-loyalty-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-loyalty-demo.debug.xcconfig"; sourceTree = "<group>"; };
+		B196303BD2BF18113B3F288F /* MutableBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MutableBox.swift; path = Box/MutableBox.swift; sourceTree = "<group>"; };
+		B713F719F02DF7705B7F2BB8 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		B7C65FD99245799617085E5F /* Pods-loyalty-demo-Box.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-loyalty-demo-Box.modulemap"; sourceTree = "<group>"; };
+		BB70C096E61DE0F688A149AA /* Pods-loyalty-demo-MeshbluKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-loyalty-demo-MeshbluKit-umbrella.h"; sourceTree = "<group>"; };
+		BEF3B15632D4B5EDEDF00596 /* MeshbluBeaconKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeshbluBeaconKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		C194EB2B4491B0EA77AD89A5 /* Pods-loyalty-demo-MeshbluBeaconKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-loyalty-demo-MeshbluBeaconKit-umbrella.h"; sourceTree = "<group>"; };
+		C4F66ED456A41A86E7CD8F5E /* Dollar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dollar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C61C3CAAC17B18959D83284C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C66722A536910502E441FF8E /* Pods-loyalty-demo-SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-loyalty-demo-SwiftyJSON.modulemap"; sourceTree = "<group>"; };
+		C87F328A0CA8F8B607E4A49E /* Pods-loyalty-demo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-loyalty-demo-resources.sh"; sourceTree = "<group>"; };
+		CD68950E8891AF94D085BFCF /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		D07A350627AD50CEC6342297 /* Pods-loyalty-demo-Dollar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-loyalty-demo-Dollar.modulemap"; sourceTree = "<group>"; };
+		D493678C542696567AC962C9 /* MeshbluHttp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MeshbluHttp.swift; path = Pod/Classes/MeshbluHttp.swift; sourceTree = "<group>"; };
+		D5FC3454E5EEB3401D35AFEF /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		D7B54610CA888A0FC70B2881 /* Pods-loyalty-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-loyalty-demo.release.xcconfig"; sourceTree = "<group>"; };
+		DC5B8A00F54E2FF5AEFFCA03 /* Pods-loyalty-demo-Result-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-loyalty-demo-Result-Private.xcconfig"; sourceTree = "<group>"; };
+		DCA5CC8A6F9FEE36BD6DD66E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		DFE77D27F29C7A2F85D7271C /* Pods-loyalty-demo-Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-loyalty-demo-Alamofire-dummy.m"; sourceTree = "<group>"; };
+		E125D48FD5FEEFBE5C976E9A /* Pods-loyalty-demo-Dollar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-loyalty-demo-Dollar-umbrella.h"; sourceTree = "<group>"; };
+		EB61710510F0138E6B25CC01 /* Pods-loyalty-demo-Box-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-loyalty-demo-Box-umbrella.h"; sourceTree = "<group>"; };
+		EB6CADBAA91439950AC7DF46 /* Box.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Box.h; path = Box/Box.h; sourceTree = "<group>"; };
+		ED732B492262DCC4E79619DC /* Pods-loyalty-demo-Result.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-loyalty-demo-Result.xcconfig"; sourceTree = "<group>"; };
+		F4A25C6819DDD0C3C31F5CCE /* Pods-loyalty-demo-MeshbluKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-loyalty-demo-MeshbluKit.xcconfig"; sourceTree = "<group>"; };
+		F4A6E40CED60DA5C14698FC1 /* Pods-loyalty-demo-Dollar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-loyalty-demo-Dollar.xcconfig"; sourceTree = "<group>"; };
+		F4C3E0DC1CE003195336D1BB /* MeshbluBeaconKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MeshbluBeaconKit.swift; path = Pod/Classes/MeshbluBeaconKit.swift; sourceTree = "<group>"; };
+		F59B3DFA530849176431BDD6 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5E9DB603860D8793BE2EB07 /* Dollar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Dollar.h; path = Dollar/Dollar/Dollar.h; sourceTree = "<group>"; };
+		FAFE6D14BA0F1F9746BE3DA6 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		FD682ACBD93F22D4A092B902 /* Pods-loyalty-demo-Dollar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-loyalty-demo-Dollar-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0CDD3F65A8E083E5B42E56FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BE9204B228313A3FEE05710 /* Box.framework in Frameworks */,
+				8CB3C871A12C0042FF53A3AC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F04DF5B16287A74DDEF0DF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				987D39E8297299CCB1FA9DD8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		159A21EECDF1AF0B80AE706A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CF6345E85868C5737031243 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39A6AABE2EE02180BBEBFE65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				601556DAA113EC5CEF78B958 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8960D80AA25FFE222320123D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF5EDE940F5954396509306D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE28857AC623DAF17D685E74 /* Alamofire.framework in Frameworks */,
+				DCDC488C711AA2DA39323749 /* Foundation.framework in Frameworks */,
+				2D9961992641ECE7EC47FB6E /* Result.framework in Frameworks */,
+				9915C36E0E224FE4104B23B2 /* SwiftyJSON.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D08B9D2ED215155303D55EC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8675C0D3FA04A9D7DFF4CCFB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF867575775BE51BDC2B4AD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				182865AB86CCF0EAC6CE6708 /* CoreLocation.framework in Frameworks */,
+				0A17A3EDD46260A99A4E70F0 /* Dollar.framework in Frameworks */,
+				4B8F9EE0827EF8CDBFF37402 /* Foundation.framework in Frameworks */,
+				C71341807E90CC4B147B2351 /* MeshbluKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E821A882BD7F6FAD89A049E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBA85F9C8621C6A73C774209 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A0EE2AE2DF81F15ABA81A55 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E435AB468E172DD184515C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2CA325F26B41769133332F8B /* Alamofire */,
+				8F1CA6CBD063ACA4C673C569 /* Box */,
+				AF934C17B3492BA74FA5DE09 /* Dollar */,
+				F53A709DBD4FBF61F6C17DE1 /* MeshbluBeaconKit */,
+				CC89AEB8FC1F56E3D377FAF6 /* MeshbluKit */,
+				F1D483FF20FCC5C5AB60F980 /* Result */,
+				49E4BC2AF51F816876784F2A /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		17280C82CF05CF9E3BF12E6D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DCA5CC8A6F9FEE36BD6DD66E /* CoreLocation.framework */,
+				02A9470FED6F718FF588E5DD /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		28D44962602036747FFE1648 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F59B3DFA530849176431BDD6 /* Alamofire.framework */,
+				2A57D47054E2F3EA1B3C2185 /* Box.framework */,
+				C4F66ED456A41A86E7CD8F5E /* Dollar.framework */,
+				BEF3B15632D4B5EDEDF00596 /* MeshbluBeaconKit.bundle */,
+				1645DA7E4D3B5FA6EC04FBDB /* MeshbluBeaconKit.framework */,
+				2B491CCA43155EEB9B241260 /* MeshbluKit.bundle */,
+				59CC2DF9D14D346CE249B0A9 /* MeshbluKit.framework */,
+				03AD86A71E280986DF800BF0 /* Pods_loyalty_demo.framework */,
+				5930CDA3910D1B344175B249 /* Result.framework */,
+				4CE0395B80BDB9EB85E285E1 /* SwiftyJSON.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A0F7632CB6077F886277F8B /* Pods-loyalty-demo */ = {
+			isa = PBXGroup;
+			children = (
+				5F5F5C36723A45B306336899 /* Info.plist */,
+				3D9A579661D877BC39763F47 /* Pods-loyalty-demo.modulemap */,
+				7DAFAA17D3425B09CFD9C142 /* Pods-loyalty-demo-acknowledgements.markdown */,
+				3660AF998F51C2375C720F47 /* Pods-loyalty-demo-acknowledgements.plist */,
+				7FBBE7AD771C5B8866F77BB9 /* Pods-loyalty-demo-dummy.m */,
+				143179061A09D56BE175BECB /* Pods-loyalty-demo-environment.h */,
+				0A4D7EF5A94196F82DC5C2A6 /* Pods-loyalty-demo-frameworks.sh */,
+				C87F328A0CA8F8B607E4A49E /* Pods-loyalty-demo-resources.sh */,
+				7BF566582DBE83CE2DE9C976 /* Pods-loyalty-demo-umbrella.h */,
+				B067C26F0605EB2766BF6910 /* Pods-loyalty-demo.debug.xcconfig */,
+				D7B54610CA888A0FC70B2881 /* Pods-loyalty-demo.release.xcconfig */,
+			);
+			name = "Pods-loyalty-demo";
+			path = "Target Support Files/Pods-loyalty-demo";
+			sourceTree = "<group>";
+		};
+		2CA325F26B41769133332F8B /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				CD68950E8891AF94D085BFCF /* Alamofire.swift */,
+				00490B629BAEFAA58021A6E0 /* Download.swift */,
+				702326C5C81B92177A30A29A /* Manager.swift */,
+				FAFE6D14BA0F1F9746BE3DA6 /* ParameterEncoding.swift */,
+				B713F719F02DF7705B7F2BB8 /* Request.swift */,
+				D5FC3454E5EEB3401D35AFEF /* ResponseSerialization.swift */,
+				7CEF52639294323DB2E88E72 /* Upload.swift */,
+				8C9A4D68B29444F3809686FF /* Validation.swift */,
+				9F89280BC39B104C794237D2 /* Support Files */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		49E4BC2AF51F816876784F2A /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				494CC650C78EBA28B2804A36 /* SwiftyJSON.swift */,
+				59D79460E883590249503601 /* Support Files */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		530E02C53E89941D5D434690 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7C365379BD7C0763642DB995 /* Info.plist */,
+				D07A350627AD50CEC6342297 /* Pods-loyalty-demo-Dollar.modulemap */,
+				F4A6E40CED60DA5C14698FC1 /* Pods-loyalty-demo-Dollar.xcconfig */,
+				269AB189BE8FA42889953204 /* Pods-loyalty-demo-Dollar-Private.xcconfig */,
+				FD682ACBD93F22D4A092B902 /* Pods-loyalty-demo-Dollar-dummy.m */,
+				A020F935C367EA31F4BE8E8A /* Pods-loyalty-demo-Dollar-prefix.pch */,
+				E125D48FD5FEEFBE5C976E9A /* Pods-loyalty-demo-Dollar-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-loyalty-demo-Dollar";
+			sourceTree = "<group>";
+		};
+		59D79460E883590249503601 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				77F2D2770F1D4C1B4BA7889A /* Info.plist */,
+				C66722A536910502E441FF8E /* Pods-loyalty-demo-SwiftyJSON.modulemap */,
+				0381C35EE6BA03A723FDA242 /* Pods-loyalty-demo-SwiftyJSON.xcconfig */,
+				71822296D728709009F0E8F5 /* Pods-loyalty-demo-SwiftyJSON-Private.xcconfig */,
+				42B067744AF50D4F436DE858 /* Pods-loyalty-demo-SwiftyJSON-dummy.m */,
+				9D4CE1CBFD1F9D21A879F0F8 /* Pods-loyalty-demo-SwiftyJSON-prefix.pch */,
+				68D0DE8948B303E369F6DF67 /* Pods-loyalty-demo-SwiftyJSON-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-loyalty-demo-SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		795D5303D381C626F23C121E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				29B9C47E4371D734AA471001 /* Info.plist */,
+				28CB6ED76EADBE82F4C5F5E7 /* Pods-loyalty-demo-MeshbluBeaconKit.modulemap */,
+				394A833010CB865934D71367 /* Pods-loyalty-demo-MeshbluBeaconKit.xcconfig */,
+				61A07DF769DE0E30283AFD21 /* Pods-loyalty-demo-MeshbluBeaconKit-Private.xcconfig */,
+				30F0A83B518AEBC9C5ACD4A2 /* Pods-loyalty-demo-MeshbluBeaconKit-dummy.m */,
+				6436C3B464F1D652FFC42C52 /* Pods-loyalty-demo-MeshbluBeaconKit-prefix.pch */,
+				C194EB2B4491B0EA77AD89A5 /* Pods-loyalty-demo-MeshbluBeaconKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-loyalty-demo-MeshbluBeaconKit";
+			sourceTree = "<group>";
+		};
+		8F1CA6CBD063ACA4C673C569 /* Box */ = {
+			isa = PBXGroup;
+			children = (
+				EB6CADBAA91439950AC7DF46 /* Box.h */,
+				44662449340939DCE09A7021 /* Box.swift */,
+				3E2652BD33A6AFF05C778028 /* BoxType.swift */,
+				B196303BD2BF18113B3F288F /* MutableBox.swift */,
+				C471D4E45B8D9790D866DD68 /* Support Files */,
+			);
+			path = Box;
+			sourceTree = "<group>";
+		};
+		9378BB986FC1E73C5733ECDC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				538251C1C005D18775654368 /* Alamofire.framework */,
+				867BE1F0A1CDECB54CFBE63A /* Box.framework */,
+				7B0E19643EE4A12690C50C35 /* Dollar.framework */,
+				A7520F46423AA6DE9C8C32D2 /* MeshbluKit.framework */,
+				1ABAFDA05367A0ADF115A893 /* Result.framework */,
+				79F3C57318912A1F921D72A5 /* SwiftyJSON.framework */,
+				17280C82CF05CF9E3BF12E6D /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E779F283E10E3B947EE07DA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				28D7DBDE01C9848DB019FB1A /* Info.plist */,
+				AB3E4A2240CB8B41C3C1AD38 /* Pods-loyalty-demo-Result.modulemap */,
+				ED732B492262DCC4E79619DC /* Pods-loyalty-demo-Result.xcconfig */,
+				DC5B8A00F54E2FF5AEFFCA03 /* Pods-loyalty-demo-Result-Private.xcconfig */,
+				49C038E34BA32FDC0A7CEB33 /* Pods-loyalty-demo-Result-dummy.m */,
+				940FB0C9B5266A8ED60D5E3D /* Pods-loyalty-demo-Result-prefix.pch */,
+				358A9A10331DB95D4E1A595E /* Pods-loyalty-demo-Result-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-loyalty-demo-Result";
+			sourceTree = "<group>";
+		};
+		9F89280BC39B104C794237D2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BE8E92E4875C2C4843D329E /* Info.plist */,
+				1C1D04163B621088AD82902D /* Pods-loyalty-demo-Alamofire.modulemap */,
+				8893A230D262BBACA0DA0F7B /* Pods-loyalty-demo-Alamofire.xcconfig */,
+				2C60FA3B13EFB3FDEFB3AD49 /* Pods-loyalty-demo-Alamofire-Private.xcconfig */,
+				DFE77D27F29C7A2F85D7271C /* Pods-loyalty-demo-Alamofire-dummy.m */,
+				0D1D29B84F60D9A6983FA17E /* Pods-loyalty-demo-Alamofire-prefix.pch */,
+				517069F1A94665DC8CD772D3 /* Pods-loyalty-demo-Alamofire-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-loyalty-demo-Alamofire";
+			sourceTree = "<group>";
+		};
+		AF934C17B3492BA74FA5DE09 /* Dollar */ = {
+			isa = PBXGroup;
+			children = (
+				739EB13441841A2CBA339083 /* AutoCurry.swift */,
+				F5E9DB603860D8793BE2EB07 /* Dollar.h */,
+				A687E30A277A61EF151724DD /* Dollar.swift */,
+				530E02C53E89941D5D434690 /* Support Files */,
+			);
+			path = Dollar;
+			sourceTree = "<group>";
+		};
+		C471D4E45B8D9790D866DD68 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C61C3CAAC17B18959D83284C /* Info.plist */,
+				B7C65FD99245799617085E5F /* Pods-loyalty-demo-Box.modulemap */,
+				4FF02C16EE51F6D66E5EE177 /* Pods-loyalty-demo-Box.xcconfig */,
+				A3EE0CF6A5F456FCCA1D694D /* Pods-loyalty-demo-Box-Private.xcconfig */,
+				987D7B5B376723C085DF4038 /* Pods-loyalty-demo-Box-dummy.m */,
+				8229C2CAD6DDE5116DB99085 /* Pods-loyalty-demo-Box-prefix.pch */,
+				EB61710510F0138E6B25CC01 /* Pods-loyalty-demo-Box-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-loyalty-demo-Box";
+			sourceTree = "<group>";
+		};
+		CC89AEB8FC1F56E3D377FAF6 /* MeshbluKit */ = {
+			isa = PBXGroup;
+			children = (
+				D493678C542696567AC962C9 /* MeshbluHttp.swift */,
+				D7D1D91AA31539BC577C3A91 /* Support Files */,
+			);
+			path = MeshbluKit;
+			sourceTree = "<group>";
+		};
+		D70D16C9DBC6F59CAB3C5417 = {
+			isa = PBXGroup;
+			children = (
+				07D86797CA0647900A1D3A1C /* Podfile */,
+				9378BB986FC1E73C5733ECDC /* Frameworks */,
+				0E435AB468E172DD184515C8 /* Pods */,
+				28D44962602036747FFE1648 /* Products */,
+				E0783CD794C3152142708451 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D7D1D91AA31539BC577C3A91 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				09F98184935A5F8DE1D2E3BA /* Info.plist */,
+				A397DE19E5930A5A5F7BF9D1 /* Pods-loyalty-demo-MeshbluKit.modulemap */,
+				F4A25C6819DDD0C3C31F5CCE /* Pods-loyalty-demo-MeshbluKit.xcconfig */,
+				9E769035169E4B34372DC0C3 /* Pods-loyalty-demo-MeshbluKit-Private.xcconfig */,
+				6DD9577D06D996920DDD2746 /* Pods-loyalty-demo-MeshbluKit-dummy.m */,
+				95720DE63F0BD9F53DF917DF /* Pods-loyalty-demo-MeshbluKit-prefix.pch */,
+				BB70C096E61DE0F688A149AA /* Pods-loyalty-demo-MeshbluKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-loyalty-demo-MeshbluKit";
+			sourceTree = "<group>";
+		};
+		E0783CD794C3152142708451 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2A0F7632CB6077F886277F8B /* Pods-loyalty-demo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F1D483FF20FCC5C5AB60F980 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				0D486CFE0FFA3AA55176D745 /* Result.swift */,
+				9E779F283E10E3B947EE07DA /* Support Files */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		F53A709DBD4FBF61F6C17DE1 /* MeshbluBeaconKit */ = {
+			isa = PBXGroup;
+			children = (
+				F4C3E0DC1CE003195336D1BB /* MeshbluBeaconKit.swift */,
+				795D5303D381C626F23C121E /* Support Files */,
+			);
+			path = MeshbluBeaconKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		060BB6FEFABDC23DC716C151 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA0949F523DA867F5EEB5AE6 /* Pods-loyalty-demo-Result-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FD6CA6320C7A0EE6BC43407 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D60A85349F4EEA04701A3F8 /* Pods-loyalty-demo-Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		723B7072289D23F1E8508411 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29AF4E5266223E281C2347FD /* Dollar.h in Headers */,
+				827DD0B0F5A3536E63EBAAC8 /* Pods-loyalty-demo-Dollar-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6B083E009DB540C9C68125E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91798898017070F0822EE2A0 /* Pods-loyalty-demo-SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9089C92D80E0ED88908B774 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2FCBFCD478C307A36BFFA93 /* Box.h in Headers */,
+				DF3A76F8B46F6AA5979428E6 /* Pods-loyalty-demo-Box-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB277B6C8A0F3D561B1E67EE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				920992C887D6D6EB1AC17459 /* Pods-loyalty-demo-MeshbluKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBD32013D94B1C8ADDBA404A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C5BE513ACFC84285A5710A6 /* Pods-loyalty-demo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE5C7610CFDCFC4208BF6279 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2C786BAC0CEA6998876D3B2 /* Pods-loyalty-demo-MeshbluBeaconKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		066E286429C3508B39985413 /* Pods-loyalty-demo-SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CDB435942E69C4C671B4868 /* Build configuration list for PBXNativeTarget "Pods-loyalty-demo-SwiftyJSON" */;
+			buildPhases = (
+				018446FD613FB79E53BEDA0E /* Sources */,
+				D08B9D2ED215155303D55EC2 /* Frameworks */,
+				C6B083E009DB540C9C68125E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-loyalty-demo-SwiftyJSON";
+			productName = "Pods-loyalty-demo-SwiftyJSON";
+			productReference = 4CE0395B80BDB9EB85E285E1 /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2F654333D7B90C6F07879ADA /* Pods-loyalty-demo-Dollar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 462E562870F24EC3457DCAB1 /* Build configuration list for PBXNativeTarget "Pods-loyalty-demo-Dollar" */;
+			buildPhases = (
+				D313A5C1297CC4D8D5914ACD /* Sources */,
+				39A6AABE2EE02180BBEBFE65 /* Frameworks */,
+				723B7072289D23F1E8508411 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-loyalty-demo-Dollar";
+			productName = "Pods-loyalty-demo-Dollar";
+			productReference = C4F66ED456A41A86E7CD8F5E /* Dollar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3F5BFF28F3C522C241EE4A4F /* Pods-loyalty-demo-Box */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D60ADEDE26B383C20926D257 /* Build configuration list for PBXNativeTarget "Pods-loyalty-demo-Box" */;
+			buildPhases = (
+				565A2279BB3226EEBC6393C6 /* Sources */,
+				0F04DF5B16287A74DDEF0DF5 /* Frameworks */,
+				F9089C92D80E0ED88908B774 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-loyalty-demo-Box";
+			productName = "Pods-loyalty-demo-Box";
+			productReference = 2A57D47054E2F3EA1B3C2185 /* Box.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		653B44703974CBAB926CCEAB /* Pods-loyalty-demo-MeshbluKit-MeshbluKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B72DA54901B92E9E1263FA5 /* Build configuration list for PBXNativeTarget "Pods-loyalty-demo-MeshbluKit-MeshbluKit" */;
+			buildPhases = (
+				D702743B3F4604F804C3E42B /* Sources */,
+				E821A882BD7F6FAD89A049E9 /* Frameworks */,
+				1299846C6165721EA5C1B9F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-loyalty-demo-MeshbluKit-MeshbluKit";
+			productName = "Pods-loyalty-demo-MeshbluKit-MeshbluKit";
+			productReference = 2B491CCA43155EEB9B241260 /* MeshbluKit.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		8B3EF9906A8850EEED50719E /* Pods-loyalty-demo-Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDE11EA7E42A5FA4AAE39C8B /* Build configuration list for PBXNativeTarget "Pods-loyalty-demo-Alamofire" */;
+			buildPhases = (
+				0DD06B399AA62D2D48BFF3FD /* Sources */,
+				FBA85F9C8621C6A73C774209 /* Frameworks */,
+				0FD6CA6320C7A0EE6BC43407 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-loyalty-demo-Alamofire";
+			productName = "Pods-loyalty-demo-Alamofire";
+			productReference = F59B3DFA530849176431BDD6 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AF2251CD67D976FACD1E50BD /* Pods-loyalty-demo-MeshbluBeaconKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 061A7C1A891CE4782B3D5FBD /* Build configuration list for PBXNativeTarget "Pods-loyalty-demo-MeshbluBeaconKit" */;
+			buildPhases = (
+				4D8A4450E55270AC39953E16 /* Sources */,
+				DF867575775BE51BDC2B4AD8 /* Frameworks */,
+				D8E5FED277CD047E5AD3393C /* Resources */,
+				FE5C7610CFDCFC4208BF6279 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				371D27E4BC4B90D2AF22CD84 /* PBXTargetDependency */,
+				F4611515793716F97776364B /* PBXTargetDependency */,
+				8F7F284D69220D83B10C1418 /* PBXTargetDependency */,
+			);
+			name = "Pods-loyalty-demo-MeshbluBeaconKit";
+			productName = "Pods-loyalty-demo-MeshbluBeaconKit";
+			productReference = 1645DA7E4D3B5FA6EC04FBDB /* MeshbluBeaconKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B99F6FC33B89F503DF75E3A5 /* Pods-loyalty-demo-MeshbluKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D094DF714285C7590273DF7D /* Build configuration list for PBXNativeTarget "Pods-loyalty-demo-MeshbluKit" */;
+			buildPhases = (
+				9A633BEF703935D7B573035F /* Sources */,
+				BF5EDE940F5954396509306D /* Frameworks */,
+				166D3272B90BBDADCB335963 /* Resources */,
+				FB277B6C8A0F3D561B1E67EE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD766BB762EE274C0F32A3BB /* PBXTargetDependency */,
+				A0C3452F252246CDFDAE69ED /* PBXTargetDependency */,
+				90633383583FB38610AEE49C /* PBXTargetDependency */,
+				5ACF5BD0B4E88D2A825E0DFE /* PBXTargetDependency */,
+			);
+			name = "Pods-loyalty-demo-MeshbluKit";
+			productName = "Pods-loyalty-demo-MeshbluKit";
+			productReference = 59CC2DF9D14D346CE249B0A9 /* MeshbluKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C492D838F7F7E8C5DA1A17EA /* Pods-loyalty-demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1510B7DE77C6AD20BFB93613 /* Build configuration list for PBXNativeTarget "Pods-loyalty-demo" */;
+			buildPhases = (
+				C6F737F3ED20BF7F3116EE8A /* Sources */,
+				159A21EECDF1AF0B80AE706A /* Frameworks */,
+				FBD32013D94B1C8ADDBA404A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50BF75CEE97FC039EB758D13 /* PBXTargetDependency */,
+				8E8B179065F5BF0F9DE95B32 /* PBXTargetDependency */,
+				18C930F6BA280AA61AEE4EA0 /* PBXTargetDependency */,
+				2E453CC0154A4BCEB28A7CE8 /* PBXTargetDependency */,
+				8F90CF8E64A669A0C32C0A7D /* PBXTargetDependency */,
+				0C5A9BD439086A2405B69FA6 /* PBXTargetDependency */,
+				4B8EEAFAA7474E9C77F4CDFA /* PBXTargetDependency */,
+			);
+			name = "Pods-loyalty-demo";
+			productName = "Pods-loyalty-demo";
+			productReference = 03AD86A71E280986DF800BF0 /* Pods_loyalty_demo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C75AAFE3721E89EC28D42179 /* Pods-loyalty-demo-MeshbluBeaconKit-MeshbluBeaconKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3996EC0D6C5D8E1E97448929 /* Build configuration list for PBXNativeTarget "Pods-loyalty-demo-MeshbluBeaconKit-MeshbluBeaconKit" */;
+			buildPhases = (
+				9B253A90BDBBA2FCC3DDE798 /* Sources */,
+				8960D80AA25FFE222320123D /* Frameworks */,
+				7DDA3C64345E529D0FA43BA9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-loyalty-demo-MeshbluBeaconKit-MeshbluBeaconKit";
+			productName = "Pods-loyalty-demo-MeshbluBeaconKit-MeshbluBeaconKit";
+			productReference = BEF3B15632D4B5EDEDF00596 /* MeshbluBeaconKit.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		D94BCF8B27831741ADF0789B /* Pods-loyalty-demo-Result */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E733EB1D6C12707A33BBBA8 /* Build configuration list for PBXNativeTarget "Pods-loyalty-demo-Result" */;
+			buildPhases = (
+				47852495EBBC68CFAA107063 /* Sources */,
+				0CDD3F65A8E083E5B42E56FE /* Frameworks */,
+				060BB6FEFABDC23DC716C151 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A130E318F4560FAA64E6EAC /* PBXTargetDependency */,
+			);
+			name = "Pods-loyalty-demo-Result";
+			productName = "Pods-loyalty-demo-Result";
+			productReference = 5930CDA3910D1B344175B249 /* Result.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		957CE0CADC9BF5BA17CD955F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = EF3EDC2F5749FCF0876E4F04 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D70D16C9DBC6F59CAB3C5417;
+			productRefGroup = 28D44962602036747FFE1648 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C492D838F7F7E8C5DA1A17EA /* Pods-loyalty-demo */,
+				8B3EF9906A8850EEED50719E /* Pods-loyalty-demo-Alamofire */,
+				3F5BFF28F3C522C241EE4A4F /* Pods-loyalty-demo-Box */,
+				2F654333D7B90C6F07879ADA /* Pods-loyalty-demo-Dollar */,
+				AF2251CD67D976FACD1E50BD /* Pods-loyalty-demo-MeshbluBeaconKit */,
+				C75AAFE3721E89EC28D42179 /* Pods-loyalty-demo-MeshbluBeaconKit-MeshbluBeaconKit */,
+				B99F6FC33B89F503DF75E3A5 /* Pods-loyalty-demo-MeshbluKit */,
+				653B44703974CBAB926CCEAB /* Pods-loyalty-demo-MeshbluKit-MeshbluKit */,
+				D94BCF8B27831741ADF0789B /* Pods-loyalty-demo-Result */,
+				066E286429C3508B39985413 /* Pods-loyalty-demo-SwiftyJSON */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1299846C6165721EA5C1B9F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		166D3272B90BBDADCB335963 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F7547D1324D32A967A8F015 /* MeshbluKit.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DDA3C64345E529D0FA43BA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8E5FED277CD047E5AD3393C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8FF4D3D7CFD909E1D3F4BC2 /* MeshbluBeaconKit.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		018446FD613FB79E53BEDA0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AE60D48D9251488B440CDD7 /* Pods-loyalty-demo-SwiftyJSON-dummy.m in Sources */,
+				8976AA26D339B286BA8C1CAA /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DD06B399AA62D2D48BFF3FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A25753D73413DAC7857EA1A /* Alamofire.swift in Sources */,
+				54E661836C274C5218AEA4B3 /* Download.swift in Sources */,
+				1AB32E2310E6A6C3894A5FE9 /* Manager.swift in Sources */,
+				F57268B63F36195F8A1C32E4 /* ParameterEncoding.swift in Sources */,
+				0295DCA01790439332A36E71 /* Pods-loyalty-demo-Alamofire-dummy.m in Sources */,
+				BBDB31A6574B8C88C373E626 /* Request.swift in Sources */,
+				0CFD3F433CBBCD0238154F8C /* ResponseSerialization.swift in Sources */,
+				6553A7F790A3F6AA68C6B132 /* Upload.swift in Sources */,
+				8E2D22A70B42CA7F4CC87498 /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47852495EBBC68CFAA107063 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A29D7168CEB3940E99E826EE /* Pods-loyalty-demo-Result-dummy.m in Sources */,
+				8EAFF0D444C5E8B37AB1368D /* Result.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D8A4450E55270AC39953E16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93FA788666097F444652C7A1 /* MeshbluBeaconKit.swift in Sources */,
+				B94D95667FB951360DE13B98 /* Pods-loyalty-demo-MeshbluBeaconKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		565A2279BB3226EEBC6393C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98E6F88CF80D7E3AD4EAF635 /* Box.swift in Sources */,
+				9062B44509FDDEFA5440C606 /* BoxType.swift in Sources */,
+				6920BCD9CED63ACD21F2AA06 /* MutableBox.swift in Sources */,
+				7FE89F9893287C85BCEB5AC5 /* Pods-loyalty-demo-Box-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A633BEF703935D7B573035F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F82A8B7A848309A2F75606CC /* MeshbluHttp.swift in Sources */,
+				138EA7BFC6AF78DF87EA38AE /* Pods-loyalty-demo-MeshbluKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B253A90BDBBA2FCC3DDE798 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6F737F3ED20BF7F3116EE8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36E3E0ADB8612F0331F2061C /* Pods-loyalty-demo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D313A5C1297CC4D8D5914ACD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				862C0CA41EF5225DD40B919E /* AutoCurry.swift in Sources */,
+				8F7FBB329BECAC1578EB34A2 /* Dollar.swift in Sources */,
+				19DF2D9EE4CC69B7CD617222 /* Pods-loyalty-demo-Dollar-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D702743B3F4604F804C3E42B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0C5A9BD439086A2405B69FA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-loyalty-demo-Result";
+			target = D94BCF8B27831741ADF0789B /* Pods-loyalty-demo-Result */;
+			targetProxy = DD72EFC5BCC857A37B08CBEB /* PBXContainerItemProxy */;
+		};
+		18C930F6BA280AA61AEE4EA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-loyalty-demo-Dollar";
+			target = 2F654333D7B90C6F07879ADA /* Pods-loyalty-demo-Dollar */;
+			targetProxy = 2754801C447426CD68B66977 /* PBXContainerItemProxy */;
+		};
+		1A130E318F4560FAA64E6EAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-loyalty-demo-Box";
+			target = 3F5BFF28F3C522C241EE4A4F /* Pods-loyalty-demo-Box */;
+			targetProxy = BD48589CBA9C6D35720107E0 /* PBXContainerItemProxy */;
+		};
+		2E453CC0154A4BCEB28A7CE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-loyalty-demo-MeshbluBeaconKit";
+			target = AF2251CD67D976FACD1E50BD /* Pods-loyalty-demo-MeshbluBeaconKit */;
+			targetProxy = CCE381138A2756F7FF01D142 /* PBXContainerItemProxy */;
+		};
+		371D27E4BC4B90D2AF22CD84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-loyalty-demo-Dollar";
+			target = 2F654333D7B90C6F07879ADA /* Pods-loyalty-demo-Dollar */;
+			targetProxy = BCF4B982A32E28C488E97BC5 /* PBXContainerItemProxy */;
+		};
+		4B8EEAFAA7474E9C77F4CDFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-loyalty-demo-SwiftyJSON";
+			target = 066E286429C3508B39985413 /* Pods-loyalty-demo-SwiftyJSON */;
+			targetProxy = 139846FE36B9D6226EF64697 /* PBXContainerItemProxy */;
+		};
+		50BF75CEE97FC039EB758D13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-loyalty-demo-Alamofire";
+			target = 8B3EF9906A8850EEED50719E /* Pods-loyalty-demo-Alamofire */;
+			targetProxy = B3036BB15B493A95615FAAFF /* PBXContainerItemProxy */;
+		};
+		5ACF5BD0B4E88D2A825E0DFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-loyalty-demo-SwiftyJSON";
+			target = 066E286429C3508B39985413 /* Pods-loyalty-demo-SwiftyJSON */;
+			targetProxy = 589CB1F5103E4947F34B3E16 /* PBXContainerItemProxy */;
+		};
+		8E8B179065F5BF0F9DE95B32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-loyalty-demo-Box";
+			target = 3F5BFF28F3C522C241EE4A4F /* Pods-loyalty-demo-Box */;
+			targetProxy = FE9BA7DC7CAD8B2396FBCDA0 /* PBXContainerItemProxy */;
+		};
+		8F7F284D69220D83B10C1418 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-loyalty-demo-MeshbluKit";
+			target = B99F6FC33B89F503DF75E3A5 /* Pods-loyalty-demo-MeshbluKit */;
+			targetProxy = 35391BA06BA07306EDBA2588 /* PBXContainerItemProxy */;
+		};
+		8F90CF8E64A669A0C32C0A7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-loyalty-demo-MeshbluKit";
+			target = B99F6FC33B89F503DF75E3A5 /* Pods-loyalty-demo-MeshbluKit */;
+			targetProxy = 8E17183FE8A5EC67713D7D33 /* PBXContainerItemProxy */;
+		};
+		90633383583FB38610AEE49C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-loyalty-demo-Result";
+			target = D94BCF8B27831741ADF0789B /* Pods-loyalty-demo-Result */;
+			targetProxy = 61A31F642F54E2F594E24A69 /* PBXContainerItemProxy */;
+		};
+		A0C3452F252246CDFDAE69ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-loyalty-demo-MeshbluKit-MeshbluKit";
+			target = 653B44703974CBAB926CCEAB /* Pods-loyalty-demo-MeshbluKit-MeshbluKit */;
+			targetProxy = 0641DC0F473172A0786018AF /* PBXContainerItemProxy */;
+		};
+		BD766BB762EE274C0F32A3BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-loyalty-demo-Alamofire";
+			target = 8B3EF9906A8850EEED50719E /* Pods-loyalty-demo-Alamofire */;
+			targetProxy = E481AC9662CAF868AF8B7B3E /* PBXContainerItemProxy */;
+		};
+		F4611515793716F97776364B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-loyalty-demo-MeshbluBeaconKit-MeshbluBeaconKit";
+			target = C75AAFE3721E89EC28D42179 /* Pods-loyalty-demo-MeshbluBeaconKit-MeshbluBeaconKit */;
+			targetProxy = 827A6A4DFF873C83B6EDD63C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0000E48B9BC00FBDDEFC6E4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61A07DF769DE0E30283AFD21 /* Pods-loyalty-demo-MeshbluBeaconKit-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-loyalty-demo-MeshbluBeaconKit/Pods-loyalty-demo-MeshbluBeaconKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-loyalty-demo-MeshbluBeaconKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-loyalty-demo-MeshbluBeaconKit/Pods-loyalty-demo-MeshbluBeaconKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MeshbluBeaconKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		02EF5533A896C77486CF0909 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC5B8A00F54E2FF5AEFFCA03 /* Pods-loyalty-demo-Result-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-loyalty-demo-Result/Pods-loyalty-demo-Result-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-loyalty-demo-Result/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-loyalty-demo-Result/Pods-loyalty-demo-Result.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Result;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		21E448AB8EC34DAD93A910DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71822296D728709009F0E8F5 /* Pods-loyalty-demo-SwiftyJSON-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-loyalty-demo-SwiftyJSON/Pods-loyalty-demo-SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-loyalty-demo-SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-loyalty-demo-SwiftyJSON/Pods-loyalty-demo-SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2803BF54AA729D5F5CA67743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C60FA3B13EFB3FDEFB3AD49 /* Pods-loyalty-demo-Alamofire-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-loyalty-demo-Alamofire/Pods-loyalty-demo-Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-loyalty-demo-Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-loyalty-demo-Alamofire/Pods-loyalty-demo-Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2B242186EACB03E32A5EC438 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E769035169E4B34372DC0C3 /* Pods-loyalty-demo-MeshbluKit-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-loyalty-demo-MeshbluKit/Pods-loyalty-demo-MeshbluKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-loyalty-demo-MeshbluKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-loyalty-demo-MeshbluKit/Pods-loyalty-demo-MeshbluKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MeshbluKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		323D6214EEC027482A036FF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7B54610CA888A0FC70B2881 /* Pods-loyalty-demo.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-loyalty-demo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-loyalty-demo/Pods-loyalty-demo.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_loyalty_demo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3CD5F00C240D4DE7336A12A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61A07DF769DE0E30283AFD21 /* Pods-loyalty-demo-MeshbluBeaconKit-Private.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-loyalty-demo";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = MeshbluBeaconKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		41A23413EB4F6B0544B10366 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E769035169E4B34372DC0C3 /* Pods-loyalty-demo-MeshbluKit-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-loyalty-demo-MeshbluKit/Pods-loyalty-demo-MeshbluKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-loyalty-demo-MeshbluKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-loyalty-demo-MeshbluKit/Pods-loyalty-demo-MeshbluKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MeshbluKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		514E251CFFCA7E57E4509CB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 269AB189BE8FA42889953204 /* Pods-loyalty-demo-Dollar-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-loyalty-demo-Dollar/Pods-loyalty-demo-Dollar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-loyalty-demo-Dollar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-loyalty-demo-Dollar/Pods-loyalty-demo-Dollar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Dollar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5794C1BDACDF2C147DC03ACC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3EE0CF6A5F456FCCA1D694D /* Pods-loyalty-demo-Box-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-loyalty-demo-Box/Pods-loyalty-demo-Box-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-loyalty-demo-Box/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-loyalty-demo-Box/Pods-loyalty-demo-Box.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Box;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		57A3EEE3D455C2895AF67834 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C60FA3B13EFB3FDEFB3AD49 /* Pods-loyalty-demo-Alamofire-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-loyalty-demo-Alamofire/Pods-loyalty-demo-Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-loyalty-demo-Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-loyalty-demo-Alamofire/Pods-loyalty-demo-Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5BA0BF2AD909F05AE76912F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E769035169E4B34372DC0C3 /* Pods-loyalty-demo-MeshbluKit-Private.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-loyalty-demo";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = MeshbluKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		7B6C94E00C9AA5282EF32155 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61A07DF769DE0E30283AFD21 /* Pods-loyalty-demo-MeshbluBeaconKit-Private.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-loyalty-demo";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = MeshbluBeaconKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		929F2D30725BD0B04AB6A157 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 269AB189BE8FA42889953204 /* Pods-loyalty-demo-Dollar-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-loyalty-demo-Dollar/Pods-loyalty-demo-Dollar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-loyalty-demo-Dollar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-loyalty-demo-Dollar/Pods-loyalty-demo-Dollar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Dollar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A146A45B8CE4D4014D288643 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B067C26F0605EB2766BF6910 /* Pods-loyalty-demo.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-loyalty-demo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-loyalty-demo/Pods-loyalty-demo.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_loyalty_demo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BD009F714A5AEDBA7D18B4F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC5B8A00F54E2FF5AEFFCA03 /* Pods-loyalty-demo-Result-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-loyalty-demo-Result/Pods-loyalty-demo-Result-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-loyalty-demo-Result/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-loyalty-demo-Result/Pods-loyalty-demo-Result.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Result;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C188CF23399B73E23DFBC604 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3EE0CF6A5F456FCCA1D694D /* Pods-loyalty-demo-Box-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-loyalty-demo-Box/Pods-loyalty-demo-Box-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-loyalty-demo-Box/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-loyalty-demo-Box/Pods-loyalty-demo-Box.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Box;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C205655B34F6C16E98FCBDAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		CB3C4BCC4CA14D14539229AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71822296D728709009F0E8F5 /* Pods-loyalty-demo-SwiftyJSON-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-loyalty-demo-SwiftyJSON/Pods-loyalty-demo-SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-loyalty-demo-SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-loyalty-demo-SwiftyJSON/Pods-loyalty-demo-SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E7B2967EF0668CBAB8287F35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E8D06589149B1B39F91C7EBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E769035169E4B34372DC0C3 /* Pods-loyalty-demo-MeshbluKit-Private.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-loyalty-demo";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = MeshbluKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		F2DBD3EBBA4B32FC2A28B8CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61A07DF769DE0E30283AFD21 /* Pods-loyalty-demo-MeshbluBeaconKit-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-loyalty-demo-MeshbluBeaconKit/Pods-loyalty-demo-MeshbluBeaconKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-loyalty-demo-MeshbluBeaconKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-loyalty-demo-MeshbluBeaconKit/Pods-loyalty-demo-MeshbluBeaconKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MeshbluBeaconKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		061A7C1A891CE4782B3D5FBD /* Build configuration list for PBXNativeTarget "Pods-loyalty-demo-MeshbluBeaconKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2DBD3EBBA4B32FC2A28B8CE /* Debug */,
+				0000E48B9BC00FBDDEFC6E4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B72DA54901B92E9E1263FA5 /* Build configuration list for PBXNativeTarget "Pods-loyalty-demo-MeshbluKit-MeshbluKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8D06589149B1B39F91C7EBE /* Debug */,
+				5BA0BF2AD909F05AE76912F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1510B7DE77C6AD20BFB93613 /* Build configuration list for PBXNativeTarget "Pods-loyalty-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A146A45B8CE4D4014D288643 /* Debug */,
+				323D6214EEC027482A036FF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CDB435942E69C4C671B4868 /* Build configuration list for PBXNativeTarget "Pods-loyalty-demo-SwiftyJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21E448AB8EC34DAD93A910DD /* Debug */,
+				CB3C4BCC4CA14D14539229AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3996EC0D6C5D8E1E97448929 /* Build configuration list for PBXNativeTarget "Pods-loyalty-demo-MeshbluBeaconKit-MeshbluBeaconKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CD5F00C240D4DE7336A12A2 /* Debug */,
+				7B6C94E00C9AA5282EF32155 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		462E562870F24EC3457DCAB1 /* Build configuration list for PBXNativeTarget "Pods-loyalty-demo-Dollar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				929F2D30725BD0B04AB6A157 /* Debug */,
+				514E251CFFCA7E57E4509CB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E733EB1D6C12707A33BBBA8 /* Build configuration list for PBXNativeTarget "Pods-loyalty-demo-Result" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02EF5533A896C77486CF0909 /* Debug */,
+				BD009F714A5AEDBA7D18B4F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D094DF714285C7590273DF7D /* Build configuration list for PBXNativeTarget "Pods-loyalty-demo-MeshbluKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B242186EACB03E32A5EC438 /* Debug */,
+				41A23413EB4F6B0544B10366 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D60ADEDE26B383C20926D257 /* Build configuration list for PBXNativeTarget "Pods-loyalty-demo-Box" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5794C1BDACDF2C147DC03ACC /* Debug */,
+				C188CF23399B73E23DFBC604 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDE11EA7E42A5FA4AAE39C8B /* Build configuration list for PBXNativeTarget "Pods-loyalty-demo-Alamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57A3EEE3D455C2895AF67834 /* Debug */,
+				2803BF54AA729D5F5CA67743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF3EDC2F5749FCF0876E4F04 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C205655B34F6C16E98FCBDAD /* Debug */,
+				E7B2967EF0668CBAB8287F35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 957CE0CADC9BF5BA17CD955F /* Project object */;
+}

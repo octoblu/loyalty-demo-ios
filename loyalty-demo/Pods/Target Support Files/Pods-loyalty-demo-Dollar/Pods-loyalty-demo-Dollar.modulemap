@@ -1,0 +1,6 @@
+framework module Dollar {
+  umbrella header "Pods-loyalty-demo-Dollar-umbrella.h"
+
+  export *
+  module * { export * }
+}
