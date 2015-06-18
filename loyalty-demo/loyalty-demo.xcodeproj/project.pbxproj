@@ -15,6 +15,7 @@
 		06A85DF31B2F4497002637F2 /* loyalty_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A85DF21B2F4497002637F2 /* loyalty_demoTests.swift */; };
 		06DBDD2E1B2F598600238F67 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DBDD2D1B2F598600238F67 /* CoreLocation.framework */; };
 		52611638AFC7AC66BA7EDEDC /* Pods_loyalty_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0521CD9A4DEBC53DC4F8B600 /* Pods_loyalty_demo.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D02638881B3376590004A9E5 /* SNSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02638871B3376590004A9E5 /* SNSService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		06DBDD2D1B2F598600238F67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1E8470A16FC4296880F38E36 /* Pods-loyalty-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loyalty-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-loyalty-demo/Pods-loyalty-demo.release.xcconfig"; sourceTree = "<group>"; };
 		343469B7D2B7616CF871CFC0 /* Pods-loyalty-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loyalty-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-loyalty-demo/Pods-loyalty-demo.debug.xcconfig"; sourceTree = "<group>"; };
+		D02638871B3376590004A9E5 /* SNSService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNSService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			children = (
 				06A85DDC1B2F4497002637F2 /* AppDelegate.swift */,
 				06A85DDE1B2F4497002637F2 /* ViewController.swift */,
+				D02638871B3376590004A9E5 /* SNSService.swift */,
 				06A85DE01B2F4497002637F2 /* Main.storyboard */,
 				06A85DE31B2F4497002637F2 /* Images.xcassets */,
 				06A85DE51B2F4497002637F2 /* LaunchScreen.xib */,
@@ -192,6 +195,7 @@
 				TargetAttributes = {
 					06A85DD61B2F4497002637F2 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = JLSZ8Q5945;
 					};
 					06A85DEB1B2F4497002637F2 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -293,6 +297,7 @@
 			files = (
 				06A85DDF1B2F4497002637F2 /* ViewController.swift in Sources */,
 				06A85DDD1B2F4497002637F2 /* AppDelegate.swift in Sources */,
+				D02638881B3376590004A9E5 /* SNSService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,9 +427,13 @@
 			baseConfigurationReference = 343469B7D2B7616CF871CFC0 /* Pods-loyalty-demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "loyalty-demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -433,9 +442,13 @@
 			baseConfigurationReference = 1E8470A16FC4296880F38E36 /* Pods-loyalty-demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "loyalty-demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MeshbluBeaconKitDelegate 
 
   var window: UIWindow?
   var meshbluBeaconKit : MeshbluBeaconKit!
-
+  var snsService: SNSService!
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     println("Starting up Loyalty app")
@@ -25,9 +25,51 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MeshbluBeaconKitDelegate 
     
     meshbluConfig["uuid"] = settings.stringForKey("uuid")
     meshbluConfig["token"] = settings.stringForKey("token")
+   
     
     self.meshbluBeaconKit = MeshbluBeaconKit(meshbluConfig: meshbluConfig)
     meshbluBeaconKit.start("B9407F30-F5F8-466E-AFF9-25556B57FE6D", beaconIdentifier: "Estimote Region", delegate: self)
+    application.applicationIconBadgeNumber = 0;
+    
+    var readAction = UIMutableUserNotificationAction()
+    readAction.identifier = "READ_IDENTIFIER"
+    readAction.title = "Read";
+    readAction.activationMode = UIUserNotificationActivationMode.Foreground;
+    readAction.destructive = false;
+    readAction.authenticationRequired = true;
+    
+    var ignoreAction = UIMutableUserNotificationAction()
+    ignoreAction.identifier = "IGNORE_IDENTIFIER";
+    ignoreAction.title = "Ignore";
+    ignoreAction.activationMode = UIUserNotificationActivationMode.Background
+    ignoreAction.destructive = false;
+    ignoreAction.authenticationRequired = false;
+    
+    var deleteAction = UIMutableUserNotificationAction()
+    deleteAction.identifier = "DELETE_IDENTIFIER";
+    deleteAction.title = "Delete";
+    deleteAction.activationMode = UIUserNotificationActivationMode.Foreground;
+    deleteAction.destructive = true;
+    deleteAction.authenticationRequired = true;
+    
+    var messageCategory = UIMutableUserNotificationCategory()
+    messageCategory.identifier = "MESSAGE_CATEGORY";
+    messageCategory.setActions([readAction, ignoreAction, deleteAction], forContext:UIUserNotificationActionContext.Default)
+    messageCategory.setActions([readAction, deleteAction], forContext:UIUserNotificationActionContext.Minimal)
+    
+    let categories = NSSet(array: [messageCategory])
+    let types: UIUserNotificationType = .Badge | .Sound | .Alert;
+    let mySettings = UIUserNotificationSettings(forTypes: types, categories: categories as Set<NSObject>)
+    
+    UIApplication.sharedApplication().registerForRemoteNotifications()
+    UIApplication.sharedApplication().registerUserNotificationSettings(mySettings)
+    
+    if launchOptions != nil {
+      let message = "\(launchOptions)"
+      createMessage(message)
+    }
+    
+ 
     return true
   }
 
@@ -51,6 +93,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MeshbluBeaconKitDelegate 
 
   func applicationWillTerminate(application: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+  }
+  
+  func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+    var characterSet: NSCharacterSet = NSCharacterSet( charactersInString: "<>" )
+    
+    var deviceTokenString: String = ( deviceToken.description as NSString )
+      .stringByTrimmingCharactersInSet( characterSet )
+      .stringByReplacingOccurrencesOfString( " ", withString: "" ) as String
+    
+    let settings = NSUserDefaults.standardUserDefaults()
+    let endpoint = settings.stringForKey("endpoint")
+    println("deviceToken \(deviceTokenString)")
+    self.snsService = SNSService(deviceId: deviceTokenString)
+    if endpoint == nil {
+      self.snsService.register({
+        println("Registered with SNS")
+      })
+    }
+  }
+  
+  func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+    println("Error registering for push notifications \(error)")
+  }
+  
+  func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+    application.applicationIconBadgeNumber = 0;
+    let message = "\(userInfo)"
+    createMessage(message)
+  }
+  
+  func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
+    if identifier == "READ_IDENTIFIER" {
+      let message = "read"
+      createMessage(message)
+    }
+    if identifier == "DELETE_IDENTIFIER" {
+      let message = "delete"
+      createMessage(message)
+    }
+    completionHandler();
+  }
+  
+  func createMessage(message: String){
+    let alertView = UIAlertView(title: "Message Recieved", message: message, delegate: self, cancelButtonTitle: "Okay")
+    alertView.show()
+    println(message)
   }
 
 
