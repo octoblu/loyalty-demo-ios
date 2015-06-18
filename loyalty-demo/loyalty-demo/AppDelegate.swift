@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MeshbluBeaconKitDelegate 
    
     
     self.meshbluBeaconKit = MeshbluBeaconKit(meshbluConfig: meshbluConfig)
-    meshbluBeaconKit.start("B9407F30-F5F8-466E-AFF9-25556B57FE6D", beaconIdentifier: "Estimote Region", delegate: self)
+//    meshbluBeaconKit.start("B9407F30-F5F8-466E-AFF9-25556B57FE6D", beaconIdentifier: "Estimote Region", delegate: self)
     application.applicationIconBadgeNumber = 0;
     
     var readAction = UIMutableUserNotificationAction()
@@ -105,11 +105,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MeshbluBeaconKitDelegate 
     let settings = NSUserDefaults.standardUserDefaults()
     let endpoint = settings.stringForKey("endpoint")
     println("deviceToken \(deviceTokenString)")
-    self.snsService = SNSService(deviceId: deviceTokenString)
+    self.snsService = SNSService(deviceId: deviceTokenString, endpoint: endpoint)
     if endpoint == nil {
       self.snsService.register({
         println("Registered with SNS")
+//        self.snsService.sendMessage()
       })
+    } else {
+//      self.snsService.sendMessage()
     }
   }
   
