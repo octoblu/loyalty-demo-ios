@@ -116,7 +116,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MeshbluBeaconKitDelegate 
     application.applicationIconBadgeNumber = 0;
     
     let message = userInfo["message"] as! Dictionary<String, AnyObject>
-    let topic = message["topic"] as! String
+    let topic = "Message Received"
     let payload = message["payload"] as! String
     
     if(UIApplication.sharedApplication().applicationState == UIApplicationState.Background) {
