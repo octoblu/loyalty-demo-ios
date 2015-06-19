@@ -159,12 +159,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MeshbluBeaconKitDelegate 
   func startBeaconKit(){
     var meshbluConfig = Dictionary<String, AnyObject>()
     let settings = NSUserDefaults.standardUserDefaults()
+    let uuid = settings.stringForKey("uuid")
+    let token = settings.stringForKey("token")
     
-    meshbluConfig["uuid"] = settings.stringForKey("uuid")
-    meshbluConfig["token"] = settings.stringForKey("token")
+    meshbluConfig["uuid"] = uuid
+    meshbluConfig["token"] = token
+    println("UUID: \(uuid) TOKEN: \(token)")
     
     
     self.meshbluBeaconKit = MeshbluBeaconKit(meshbluConfig: meshbluConfig, delegate: self)
+    self.meshbluBeaconKit.enableDebug()
     meshbluBeaconKit.start("B9407F30-F5F8-466E-AFF9-25556B57FE6D", beaconIdentifier: "Estimote Region")
   }
 }
@@ -202,6 +206,15 @@ extension AppDelegate: MeshbluBeaconKitDelegate {
     self.updateMainViewWithMessage(message)
     self.meshbluBeaconKit.sendLocationUpdate(response) {
       (result) -> () in
+      switch result {
+      case let .Failure(error):
+        println("Error messaging device with SNS \(error)")
+      case let .Success(success):
+        println("message succeeded")
+      default:
+        println("Neither failure or success")
+      }
+  
     }
   }
   
