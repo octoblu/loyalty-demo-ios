@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import MeshbluBeaconKit
+import MeshbluKit
 import SwiftyJSON
 
 @UIApplicationMain
@@ -20,22 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MeshbluBeaconKitDelegate 
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     println("Starting up Loyalty app")
-    var meshbluConfig = Dictionary<String, AnyObject>()
-    let settings = NSUserDefaults.standardUserDefaults()
-    
-    meshbluConfig["uuid"] = settings.stringForKey("uuid")
-    meshbluConfig["token"] = settings.stringForKey("token")
-   
-    
-    self.meshbluBeaconKit = MeshbluBeaconKit(meshbluConfig: meshbluConfig)
-//    meshbluBeaconKit.start("B9407F30-F5F8-466E-AFF9-25556B57FE6D", beaconIdentifier: "Estimote Region", delegate: self)
     application.applicationIconBadgeNumber = 0;
     
     var readAction = UIMutableUserNotificationAction()
     readAction.identifier = "READ_IDENTIFIER"
     readAction.title = "Read";
     readAction.activationMode = UIUserNotificationActivationMode.Foreground;
-    readAction.destructive = false;
+    readAction.destructive = true;
     readAction.authenticationRequired = true;
     
     var ignoreAction = UIMutableUserNotificationAction()
@@ -109,10 +101,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MeshbluBeaconKitDelegate 
     if endpoint == nil {
       self.snsService.register({
         println("Registered with SNS")
-//        self.snsService.sendMessage()
+        self.startBeaconKit()
       })
     } else {
-//      self.snsService.sendMessage()
+      self.startBeaconKit()
     }
   }
   
@@ -122,8 +114,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MeshbluBeaconKitDelegate 
   
   func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
     application.applicationIconBadgeNumber = 0;
-    let message = "\(userInfo)"
-    createMessage(message)
+    
+    let message = userInfo["message"] as! Dictionary<String, AnyObject>
+    let topic = message["topic"] as! String
+    let payload = message["payload"] as! String
+    
+    if(UIApplication.sharedApplication().applicationState == UIApplicationState.Background) {
+      var notification = UILocalNotification()
+      notification.alertTitle = topic
+      notification.alertBody = payload
+      
+      UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+    } else {
+      let alertView = UIAlertView(title: topic, message: payload, delegate: self, cancelButtonTitle: "Okay")
+      alertView.show()
+    }
   }
   
   func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
@@ -138,13 +143,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MeshbluBeaconKitDelegate 
     completionHandler();
   }
   
-  func createMessage(message: String){
-    let alertView = UIAlertView(title: "Message Recieved", message: message, delegate: self, cancelButtonTitle: "Okay")
-    alertView.show()
-    println(message)
+  func createMessage(rawMessage: String){
+    let rawData = rawMessage.dataUsingEncoding(NSUTF8StringEncoding)
+    let messageJSON = JSON(data: rawData!, options: nil, error: nil)
+    let message = messageJSON["payload"].string
+    if message != nil {
+      let alertView = UIAlertView(title: "Message Recieved", message: message!, delegate: self, cancelButtonTitle: "Okay")
+      alertView.show()
+      println("Message Recieved \(message!)")
+      return
+    }
+    println("Invalid Message Received")
   }
-
-
+  
+  func startBeaconKit(){
+    var meshbluConfig = Dictionary<String, AnyObject>()
+    let settings = NSUserDefaults.standardUserDefaults()
+    
+    meshbluConfig["uuid"] = settings.stringForKey("uuid")
+    meshbluConfig["token"] = settings.stringForKey("token")
+    
+    
+    self.meshbluBeaconKit = MeshbluBeaconKit(meshbluConfig: meshbluConfig, delegate: self)
+    meshbluBeaconKit.start("B9407F30-F5F8-466E-AFF9-25556B57FE6D", beaconIdentifier: "Estimote Region")
+  }
 }
 
 extension AppDelegate: MeshbluBeaconKitDelegate {
@@ -156,7 +178,7 @@ extension AppDelegate: MeshbluBeaconKitDelegate {
   
   func updateMainViewWithMessage(message: String){
     let viewController = getMainControler()
-    println("Message is \(message)")
+//    println("Message is \(message)")
   }
   
   func proximityChanged(response: [String: AnyObject]) {
@@ -183,8 +205,8 @@ extension AppDelegate: MeshbluBeaconKitDelegate {
     }
   }
   
-  func meshbluBeaconIsUnregistered() {
-    println("Meshblu Beacon Unregistered")
+  func meshbluBeaconIsNotRegistered() {
+    println("Meshblu Beacon Not Registered")
     self.meshbluBeaconKit.register()
   }
   
@@ -196,6 +218,47 @@ extension AppDelegate: MeshbluBeaconKitDelegate {
     
     settings.setObject(uuid, forKey: "uuid")
     settings.setObject(token, forKey: "token")
+    
+    let endpoint = settings.stringForKey("endpoint")!
+  
+    let meshbluHttp = meshbluBeaconKit.getMeshbluClient()
+    let meshbluUpdateProperties : [String: AnyObject] = [
+      "meshblu": [
+        "messageHooks": [
+          [
+            "url": "https://sns.octoblu.com/messages",
+            "method": "POST",
+            "headers": [
+              "X-SNS-ARN": self.snsService.arn,
+              "X-SNS-Endpoint": endpoint,
+              "X-SNS-Platform": "IOS",
+              "X-SNS-Sandbox": "true"
+            ]
+          ],
+          [
+            "url": "http://requestb.in/10o1vdr1",
+            "method": "POST",
+            "headers": [
+              "X-SNS-ARN": self.snsService.arn,
+              "X-SNS-Endpoint": endpoint,
+              "X-SNS-Platform": "IOS",
+              "X-SNS-Sandbox": "true"
+            ]
+          ]
+        ]
+      ]
+    ]
+    
+    meshbluHttp.update(meshbluUpdateProperties, handler: { (result) -> () in
+      switch result {
+      case let .Failure(error):
+        println("Error updating device with SNS \(error)")
+      case let .Success(success):
+        println("Update succeeded")
+      default:
+        println("Neither failure or success")
+      }
+    })
   }
   
   func beaconEnteredRegion() {
