@@ -115,11 +115,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MeshbluBeaconKitDelegate 
   func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
     application.applicationIconBadgeNumber = 0;
     
-    let message = userInfo["aps"] as! Dictionary<String, AnyObject>
+    let message = userInfo["message"] as! Dictionary<String, AnyObject>
     let topic = "Loyalty Discount"
-//    let payload = message["payload"] as! String
-    let payload = "10% off Jeans"
-    
+    let payload = message["payload"] as! String
     
     if(UIApplication.sharedApplication().applicationState == UIApplicationState.Background) {
       var notification = UILocalNotification()
