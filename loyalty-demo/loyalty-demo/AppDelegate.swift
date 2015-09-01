@@ -169,7 +169,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MeshbluBeaconKitDelegate 
     
     self.meshbluBeaconKit = MeshbluBeaconKit(meshbluConfig: meshbluConfig, delegate: self)
     self.meshbluBeaconKit.enableDebug()
-    meshbluBeaconKit.start("B9407F30-F5F8-466E-AFF9-25556B57FE6D", beaconIdentifier: "Estimote Region")
+    let beaconTypes = [
+      "B9407F30-F5F8-466E-AFF9-25556B57FE6D":"Estimote Region",
+      "CF593B78-DA79-4077-ABA3-940085DF45CA":"iBeaconModules.us"
+    ]
+    meshbluBeaconKit.start(beaconTypes)
   }
 }
 
@@ -236,32 +240,20 @@ extension AppDelegate: MeshbluBeaconKitDelegate {
   
     let meshbluHttp = meshbluBeaconKit.getMeshbluClient()
     let meshbluUpdateProperties : [String: AnyObject] = [
-      "meshblu": [
-        "messageHooks": [
-          [
-            "url": "https://sns.octoblu.com/messages",
-            "method": "POST",
-            "headers": [
-              "X-SNS-ARN": self.snsService.arn,
-              "X-SNS-Endpoint": endpoint,
-              "X-SNS-Platform": "IOS",
-              "X-SNS-Sandbox": "true"
-            ]
-          ],
-          [
-            "url": "http://requestb.in/10o1vdr1",
-            "method": "POST",
-            "headers": [
-              "X-SNS-ARN": self.snsService.arn,
-              "X-SNS-Endpoint": endpoint,
-              "X-SNS-Platform": "IOS",
-              "X-SNS-Sandbox": "true"
-            ]
+      "meshblu.messageHooks": [
+        [
+          "url": "https://sns.octoblu.com/messages",
+          "method": "POST",
+          "headers": [
+            "X-SNS-ARN": self.snsService.arn,
+            "X-SNS-Endpoint": endpoint,
+            "X-SNS-Platform": "IOS",
+            "X-SNS-Sandbox": "true"
           ]
         ]
       ]
     ]
-    
+    println("Meshblu Update with SNS \(meshbluUpdateProperties)")
     meshbluHttp.update(meshbluUpdateProperties, handler: { (result) -> () in
       switch result {
       case let .Failure(error):

@@ -14,7 +14,7 @@
 		06A85DE71B2F4497002637F2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06A85DE51B2F4497002637F2 /* LaunchScreen.xib */; };
 		06A85DF31B2F4497002637F2 /* loyalty_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A85DF21B2F4497002637F2 /* loyalty_demoTests.swift */; };
 		06DBDD2E1B2F598600238F67 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DBDD2D1B2F598600238F67 /* CoreLocation.framework */; };
-		52611638AFC7AC66BA7EDEDC /* Pods_loyalty_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0521CD9A4DEBC53DC4F8B600 /* Pods_loyalty_demo.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		74FADF18B9BFED28EE354845 /* Pods_loyalty_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0521CD9A4DEBC53DC4F8B600 /* Pods_loyalty_demo.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D02638881B3376590004A9E5 /* SNSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02638871B3376590004A9E5 /* SNSService.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +30,9 @@
 
 /* Begin PBXFileReference section */
 		0521CD9A4DEBC53DC4F8B600 /* Pods_loyalty_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_loyalty_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		065354BB1B9618C9002DFE41 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		065354BD1B9618E9002DFE41 /* Pods_loyalty_demo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_loyalty_demo.framework; path = "Pods/../build/Debug-iphoneos/Pods_loyalty_demo.framework"; sourceTree = "<group>"; };
+		065354BF1B961E82002DFE41 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		06A85DD71B2F4497002637F2 /* loyalty-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "loyalty-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06A85DDB1B2F4497002637F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06A85DDC1B2F4497002637F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06DBDD2E1B2F598600238F67 /* CoreLocation.framework in Frameworks */,
-				52611638AFC7AC66BA7EDEDC /* Pods_loyalty_demo.framework in Frameworks */,
+				74FADF18B9BFED28EE354845 /* Pods_loyalty_demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +140,9 @@
 		9AA3D70BB46C0373FC765DF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				065354BF1B961E82002DFE41 /* Alamofire.framework */,
+				065354BD1B9618E9002DFE41 /* Pods_loyalty_demo.framework */,
+				065354BB1B9618C9002DFE41 /* Alamofire.framework */,
 				06DBDD2D1B2F598600238F67 /* CoreLocation.framework */,
 				0521CD9A4DEBC53DC4F8B600 /* Pods_loyalty_demo.framework */,
 			);
@@ -429,6 +435,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "loyalty-demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -444,6 +454,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "loyalty-demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
