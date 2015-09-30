@@ -18,7 +18,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     let url = NSURL(string: "http://kiosk.octoblu.com/kiosk.html#!\(self.uuid)/\(self.token)")
-    var urlRequest = NSURLRequest(URL: url!)
+    let urlRequest = NSURLRequest(URL: url!)
     self.kioskWebView.loadRequest(urlRequest)
   }
 

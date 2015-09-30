@@ -4,12 +4,11 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'loyalty-demo' do
-  pod "MeshbluBeaconKit"
-  pod "MeshbluKit"
-  pod "Alamofire"
+  pod 'Alamofire', '~> 2.0.2'
+  pod 'MeshbluKit', '~> 1.5.1'
+  pod 'MeshbluBeaconKit', '~> 2.5.0'
 end
 
 target 'loyalty-demoTests' do
 
 end
-

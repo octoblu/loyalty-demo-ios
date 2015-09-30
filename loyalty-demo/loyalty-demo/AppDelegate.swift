@@ -20,41 +20,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MeshbluBeaconKitDelegate 
   var snsService: SNSService!
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    println("Starting up Loyalty app")
+    print("Starting up Loyalty app")
     application.applicationIconBadgeNumber = 0;
     
-    var readAction = UIMutableUserNotificationAction()
+    let readAction = UIMutableUserNotificationAction()
     readAction.identifier = "READ_IDENTIFIER"
     readAction.title = "Read";
     readAction.activationMode = UIUserNotificationActivationMode.Foreground;
     readAction.destructive = true;
     readAction.authenticationRequired = true;
     
-    var ignoreAction = UIMutableUserNotificationAction()
+    let ignoreAction = UIMutableUserNotificationAction()
     ignoreAction.identifier = "IGNORE_IDENTIFIER";
     ignoreAction.title = "Ignore";
     ignoreAction.activationMode = UIUserNotificationActivationMode.Background
     ignoreAction.destructive = false;
     ignoreAction.authenticationRequired = false;
     
-    var deleteAction = UIMutableUserNotificationAction()
+    let deleteAction = UIMutableUserNotificationAction()
     deleteAction.identifier = "DELETE_IDENTIFIER";
     deleteAction.title = "Delete";
     deleteAction.activationMode = UIUserNotificationActivationMode.Foreground;
     deleteAction.destructive = true;
     deleteAction.authenticationRequired = true;
     
-    var messageCategory = UIMutableUserNotificationCategory()
+    let messageCategory = UIMutableUserNotificationCategory()
     messageCategory.identifier = "MESSAGE_CATEGORY";
     messageCategory.setActions([readAction, ignoreAction, deleteAction], forContext:UIUserNotificationActionContext.Default)
     messageCategory.setActions([readAction, deleteAction], forContext:UIUserNotificationActionContext.Minimal)
+//    
+//    let categories = NSSet(array: [messageCategory])
+//    let types: UIUserNotificationType = .Badge | .Sound | .Alert;
+//    let mySettings = UIUserNotificationSettings(forTypes: types, categories: categories as Set<NSObject>)
+//    
+//    UIApplication.sharedApplication().registerForRemoteNotifications()
+//    UIApplication.sharedApplication().registerUserNotificationSettings(mySettings)
     
-    let categories = NSSet(array: [messageCategory])
-    let types: UIUserNotificationType = .Badge | .Sound | .Alert;
-    let mySettings = UIUserNotificationSettings(forTypes: types, categories: categories as Set<NSObject>)
+    
+    
+    let types: UIUserNotificationType = [.Alert, .Badge, .Sound]
+    let categories = NSSet(array: [messageCategory]) as? Set<UIUserNotificationCategory>
+    let settings = UIUserNotificationSettings(forTypes: types, categories: categories)
     
     UIApplication.sharedApplication().registerForRemoteNotifications()
-    UIApplication.sharedApplication().registerUserNotificationSettings(mySettings)
+    UIApplication.sharedApplication().registerUserNotificationSettings(settings)
     
     if launchOptions != nil {
       let message = "\(launchOptions)"
@@ -64,43 +73,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MeshbluBeaconKitDelegate 
  
     return true
   }
-
-  func applicationWillResignActive(application: UIApplication) {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-  }
-
-  func applicationDidEnterBackground(application: UIApplication) {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-  }
-
-  func applicationWillEnterForeground(application: UIApplication) {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-  }
-
-  func applicationDidBecomeActive(application: UIApplication) {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-  }
-
-  func applicationWillTerminate(application: UIApplication) {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-  }
   
   func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
-    var characterSet: NSCharacterSet = NSCharacterSet( charactersInString: "<>" )
+    let characterSet: NSCharacterSet = NSCharacterSet( charactersInString: "<>" )
     
-    var deviceTokenString: String = ( deviceToken.description as NSString )
+    let deviceTokenString: String = ( deviceToken.description as NSString )
       .stringByTrimmingCharactersInSet( characterSet )
       .stringByReplacingOccurrencesOfString( " ", withString: "" ) as String
     
     let settings = NSUserDefaults.standardUserDefaults()
     let endpoint = settings.stringForKey("endpoint")
-    println("deviceToken \(deviceTokenString)")
+    print("deviceToken \(deviceTokenString)")
     self.snsService = SNSService(deviceId: deviceTokenString, endpoint: endpoint)
     if endpoint == nil {
       self.snsService.register({
-        println("Registered with SNS")
+        print("Registered with SNS")
         self.startBeaconKit()
       })
     } else {
@@ -109,7 +96,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MeshbluBeaconKitDelegate 
   }
   
   func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
-    println("Error registering for push notifications \(error)")
+    print("Error registering for push notifications \(error)")
   }
   
   func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
@@ -120,7 +107,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MeshbluBeaconKitDelegate 
     let payload = message["payload"] as! String
     
     if(UIApplication.sharedApplication().applicationState == UIApplicationState.Background) {
-      var notification = UILocalNotification()
+      let notification = UILocalNotification()
       notification.alertTitle = topic
       notification.alertBody = payload
       
@@ -145,15 +132,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MeshbluBeaconKitDelegate 
   
   func createMessage(rawMessage: String){
     let rawData = rawMessage.dataUsingEncoding(NSUTF8StringEncoding)
-    let messageJSON = JSON(data: rawData!, options: nil, error: nil)
+    let messageJSON = JSON(data: rawData!)
     let message = messageJSON["payload"].string
     if message != nil {
       let alertView = UIAlertView(title: "Message Recieved", message: message!, delegate: self, cancelButtonTitle: "Okay")
       alertView.show()
-      println("Message Recieved \(message!)")
+      print("Message Recieved \(message!)")
       return
     }
-    println("Invalid Message Received")
+    print("Invalid Message Received")
   }
   
   func startBeaconKit(){
@@ -164,7 +151,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MeshbluBeaconKitDelegate 
     
     meshbluConfig["uuid"] = uuid
     meshbluConfig["token"] = token
-    println("UUID: \(uuid) TOKEN: \(token)")
+    print("UUID: \(uuid) TOKEN: \(token)")
     
     
     self.meshbluBeaconKit = MeshbluBeaconKit(meshbluConfig: meshbluConfig, delegate: self)
@@ -175,9 +162,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MeshbluBeaconKitDelegate 
     ]
     meshbluBeaconKit.start(beaconTypes)
   }
-}
 
-extension AppDelegate: MeshbluBeaconKitDelegate {
   
   func getMainControler() -> ViewController {
     let viewController:ViewController = window!.rootViewController as! ViewController
@@ -190,7 +175,7 @@ extension AppDelegate: MeshbluBeaconKitDelegate {
   }
   
   func proximityChanged(response: [String: AnyObject]) {
-    println("Proximity Changed")
+    print("Proximity Changed")
     var message = ""
     let proximity = response["proximity"] as! [String: AnyObject]
     switch(proximity["code"] as! Int) {
@@ -212,23 +197,23 @@ extension AppDelegate: MeshbluBeaconKitDelegate {
       (result) -> () in
       switch result {
       case let .Failure(error):
-        println("Error messaging device with SNS \(error)")
-      case let .Success(success):
-        println("message succeeded")
+        print("Error messaging device with SNS \(error)")
+      case .Success(_):
+        print("message succeeded")
       default:
-        println("Neither failure or success")
+        print("Neither failure or success")
       }
   
     }
   }
   
   func meshbluBeaconIsNotRegistered() {
-    println("Meshblu Beacon Not Registered")
+    print("Meshblu Beacon Not Registered")
     self.meshbluBeaconKit.register()
   }
   
   func meshbluBeaconRegistrationSuccess(device: [String: AnyObject]) {
-    println("Meshblu Registration Success \(device)")
+    print("Meshblu Registration Success \(device)")
     let settings = NSUserDefaults.standardUserDefaults()
     let uuid = device["uuid"] as! String
     let token = device["token"] as! String
@@ -253,15 +238,15 @@ extension AppDelegate: MeshbluBeaconKitDelegate {
         ]
       ]
     ]
-    println("Meshblu Update with SNS \(meshbluUpdateProperties)")
+    print("Meshblu Update with SNS \(meshbluUpdateProperties)")
     meshbluHttp.update(meshbluUpdateProperties, handler: { (result) -> () in
       switch result {
       case let .Failure(error):
-        println("Error updating device with SNS \(error)")
-      case let .Success(success):
-        println("Update succeeded")
+        print("Error updating device with SNS \(error)")
+      case .Success(_):
+        print("Update succeeded")
       default:
-        println("Neither failure or success")
+        print("Neither failure or success")
       }
     })
   }

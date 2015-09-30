@@ -9,7 +9,6 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
-import Result
 
 class SNSService {
   var manager : Alamofire.Manager!
@@ -33,7 +32,7 @@ class SNSService {
     if self.endpoint != nil {
       defaultHeaders["X-SNS-Endpoint"] = endpoint!
     }
-    println("Setting headers \(defaultHeaders)")
+    print("Setting headers \(defaultHeaders)")
     
     let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
     configuration.HTTPAdditionalHeaders = defaultHeaders
@@ -44,16 +43,13 @@ class SNSService {
     self.post("/devices", parameters: [:], handler: { (result) -> () in
       switch result {
       case let .Failure(error):
-        println("Error registering device with SNS \(error)")
-      case let .Success(success):
-        let json = success.value
-        var data = Dictionary<String, AnyObject>()
+        print("Error registering device with SNS \(error)")
+      case let .Success(data):
+        let json = JSON(data)
         self.endpoint = json["endpoint"].stringValue
         let settings = NSUserDefaults.standardUserDefaults()
         settings.setObject(self.endpoint!, forKey: "endpoint")
         self.setManager()
-      default:
-        println("Neither failure or success")
       }
       done()
     })
@@ -63,16 +59,14 @@ class SNSService {
     self.post("/messages", parameters: ["type":"hello"], handler: { (result) -> () in
       switch result {
       case let .Failure(error):
-        println("Error messaging device with SNS \(error)")
-      case let .Success(success):
-        println("Message succeeded")
-      default:
-        println("Neither failure or success")
+        print("Error messaging device with SNS \(error)")
+      case .Success(_):
+        print("Message succeeded")
       }
     })
   }
   
-  func post(path : String, parameters : [String: AnyObject], handler: (Result<JSON, NSError>) -> ()){
+  func post(path : String, parameters : [String: AnyObject], handler: (Result<AnyObject>) -> ()){
     let urlComponent = NSURLComponents()
     urlComponent.port = 443
     urlComponent.host = "sns.octoblu.com"
@@ -80,12 +74,11 @@ class SNSService {
     urlComponent.path = path
     let url = urlComponent.string!
     
-    println("About to request")
+    print("About to request")
     
     self.manager.request(.POST, url, parameters: parameters, encoding: .JSON)
-      .responseJSON { (request, response, data, error) in
-        let json = JSON(data!)
-        handler(Result(value: json))
+      .responseJSON { (_,_, data) in
+        handler(data)
     }
   }
 }
